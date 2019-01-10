@@ -32,7 +32,7 @@
     padding: 0
 
   .logo
-    margin: 110px 0 0 100px
+    margin: 80px 0 0 100px
     width: 140px
     height: 100px
     max-width: 100%
@@ -54,7 +54,7 @@
   .login-form
     @extend %full-column-flex-box
     position: relative
-    margin: 30px 0 0 0
+    margin: 20px  0
     align-items: center
     width: 100%
 
@@ -76,12 +76,13 @@
         background-color: $gold-brand
         color: $blue-brand
         img
-          width: 20px
+          width: 25px
 
       .twitter
         @extend %social-button
         background-color: $blue-brand
         color: $gold-brand
+        height: initial
         img
           width: 20px
 
@@ -95,7 +96,7 @@
         margin-right: 12px
 
       div
-        width: 50%
+        width: 50% !important
 
     input[type="email"],
     input[type="password"],
@@ -120,12 +121,12 @@
 
 @media screen and (max-width: 65rem)
   .poly
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)
 
   .white-background
+
     .logo
-      margin: 30px auto
+     margin: 10px auto
 
     .down-arrow
       display: none
@@ -136,17 +137,15 @@
     .talent
       text-align: center
       width: 100%
-      margin: 30px auto
+      margin: 10px auto
 
-      .login-form
-        margin: 30px auto
-
-        .social-login
-          width: 100%
-          flex-direction: column
-          height: initial
-
-          div
-            width: 96% !important
-            margin: 6px auto !important
+    .login-form
+      margin: 5px auto
+      .social-login
+        width: 100%
+        flex-direction: column
+        height: initial
+        div
+          width: 70% !important
+          margin: 6px auto !important
 

@@ -33,14 +33,14 @@
     width: 8%
 
   .logo
-    margin: 110px 0 0 160px
+    margin: 90px 0 0 140px
     width: 140px
     height: 100px
     max-width: 100%
     max-height: 100%
 
   .talent
-    margin: 60px 0 0 160px
+    margin: 40px 0 0 140px
     width: 100%
     max-width: 100%
     max-height: 100%
@@ -55,7 +55,7 @@
   .login-form
     @extend %full-column-flex-box
     position: relative
-    margin: 30px 0 0 60px
+    margin: 30px 0 0 40px
     align-items: center
     width: 100%
 
@@ -81,7 +81,7 @@
       color: $blue-brand !important
       font-weight: 300
       font-size: 14px
-      width: 75%
+      width: 89%
 
       .facebook
         @extend %social-button
@@ -100,6 +100,12 @@
 
         img
           width: 20px
+
+      .twitter
+        @extend %social-button
+        background-color: #fff
+        color: $gold-brand
+        height: initial
 
       p
         width: 100%
@@ -140,7 +146,7 @@
   .blue-background
 
     .logo
-      margin: 30px auto
+      margin: 10px auto
 
     .down-arrow
       display: none
@@ -151,18 +157,14 @@
     .talent
       text-align: center
       width: 100%
-      margin: 30px auto
+      margin: 10px auto
 
     .login-form
-      margin: 30px auto
-
-    .social-login
-      width: 100%
-      flex-direction: column
-      height: 100%
-      flex-wrap: wrap
-
-      div
-        width: 92% !important
-        height: 100% !important
-        margin: 6px auto !important
+      margin: 5px auto
+      .social-login
+        width: 100%
+        flex-direction: column
+        height: initial
+        div
+          width: 70% !important
+          margin: 6px auto !important
