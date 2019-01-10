@@ -15,6 +15,8 @@ import { FooterComponent } from './modules/home/shared/footer/footer.component';
 import { ContactComponent } from './modules/home/shared/contact/contact.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { LoginComponent } from './modules/authentication/login/login.component';
+import { SignupComponent } from './modules/authentication/signup/signup.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { environment } from '../environments/environment';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,152 @@
+@import "../../../../assets/styles/abstracts/variables"
+
+.poly
+  height: 100vh
+  clip-path: polygon(0 0, 95% 0, 100% 100%, 0% 100%)
+
+  .signup-background
+    @extend %background
+    background: $signup-background no-repeat center
+    position: relative
+
+.white-background
+  @extend %full-column-flex-box
+  background-color: #fff
+  overflow: hidden
+  position: relative
+  height: 100%
+  width: 100%
+
+  .down-arrow
+    position: absolute
+    top: 0
+    right: 0
+    width: 24%
+
+  .right-arrow
+    position: fixed
+    bottom: 0
+    left: 48.4%
+    width: 8%
+    margin: 0
+    padding: 0
+
+  .logo
+    margin: 110px 0 0 100px
+    width: 140px
+    height: 100px
+    max-width: 100%
+    max-height: 100%
+
+  .talent
+    margin: 50px 0 0 100px
+    width: 100%
+    max-width: 100%
+    max-height: 100%
+    color: $blue-brand
+    font-size: 19px
+    font-family: $default-fonts
+    font-weight: 300
+
+    p
+      margin: 0
+
+  .login-form
+    @extend %full-column-flex-box
+    position: relative
+    margin: 30px 0 0 0
+    align-items: center
+    width: 100%
+
+    .social-login
+      display: flex
+      width: 73%
+      height: initial
+      justify-content: space-between
+      font-weight: 300
+      font-size: 14px
+
+      .facebook
+        @extend %social-button
+        color: #fff
+        background-color: $blue-brand
+
+      .google
+        @extend %social-button
+        background-color: $gold-brand
+        color: $blue-brand
+        img
+          width: 20px
+
+      .twitter
+        @extend %social-button
+        background-color: $blue-brand
+        color: $gold-brand
+        img
+          width: 20px
+
+      p
+        width: 100%
+        margin: 0 5px
+        line-height: 1rem
+
+      img
+        width: 10px
+        margin-right: 12px
+
+      div
+        width: 50%
+
+    input[type="email"],
+    input[type="password"],
+    input[type="text"]
+      width: 70%
+      margin: 5px
+      outline: none
+      border: 1px solid $blue-brand
+      color: #000
+      padding: 6px 8px
+
+      &::placeholder
+        color: #000
+        font-weight: 300
+        font-size: 14px
+        opacity: 1
+
+      &:focus
+        color: #000
+        border: 1px solid $blue-brand
+        opacity: 1
+
+@media screen and (max-width: 65rem)
+  .poly
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)
+
+  .white-background
+    .logo
+      margin: 30px auto
+
+    .down-arrow
+      display: none
+
+    .right-arrow
+      display: none
+
+    .talent
+      text-align: center
+      width: 100%
+      margin: 30px auto
+
+      .login-form
+        margin: 30px auto
+
+        .social-login
+          width: 100%
+          flex-direction: column
+          height: initial
+
+          div
+            width: 96% !important
+            margin: 6px auto !important
+
