@@ -22,7 +22,7 @@ export class ContactComponent implements OnInit {
   edited = false;
   success = false;
 
-  @ViewChild('form') form: ngForm;
+  @ViewChild('form') form: NgForm;
 
   ngOnInit() {
   }
