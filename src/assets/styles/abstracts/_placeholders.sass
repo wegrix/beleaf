@@ -1,0 +1,29 @@
+// Full height Boxes
+%full-column-flex-box 
+  display: flex
+  flex-direction: column
+  width: 100%
+  height: 100%
+
+%full-row-flex-box
+  @extend %full-column-flex-box 
+  flex-direction: row
+
+// BACKGROUNDS
+%flex-center
+  @extend %full-column-flex-box 
+  justify-content: center
+  align-items: center
+
+%background
+  width: 100%
+  height: 100%
+  background-size: cover
+  background-repeat: no-repeat
+
+%social-button
+  display: flex
+  width: 45%
+  align-items: center
+  margin: 8px
+  padding: 8px 0

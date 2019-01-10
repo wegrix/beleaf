@@ -1,0 +1,105 @@
+.logo 
+    background: url(/assets/images/home/logo.png) no-repeat
+    background-size: contain
+    height: 80px
+    width: 80px
+    margin: 20px
+
+.logo-text
+    font-family: Asgalt, sans-serif
+    font-size: 20px
+    margin: 0 0 15px 0
+
+
+.home-header
+    background-color: #264060
+    display: flex
+    color: #F4C17F
+    
+    .home-navigation
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin: 20px
+        flex-wrap: wrap
+        width: 100%
+
+        .hamburger-icon
+            display: none
+
+        ul
+            display: flex
+            flex-wrap: wrap
+    
+            li
+                list-style: none
+                margin-right: 10px
+
+            .login-signup
+                display: flex
+                margin: 0
+
+                a
+                    padding: 2px 2px
+            
+            a
+                text-decoration: none
+                color: #F4C17F
+                font-family: Muli, serif
+                font-weight: lighter
+                font-size: 15px
+            
+
+        
+    .icon-navigation 
+        display: flex
+        flex-direction: row
+
+        
+        div
+            padding: 0
+
+            img 
+                width: 30px
+                height: 30px
+                fill: #F4C17F
+                margin-right: 25px
+                padding: 0
+
+
+    @media screen and (max-width: 48rem) 
+        .home-navigation
+
+            .hamburger-icon
+                display: flex
+                justify-content: space-between
+
+            .show
+                margin-top: 40px
+                display: flex
+                flex-direction: column
+                height: 70vh
+                padding: 0
+                li
+                    text-align: center
+                    justify-content: center
+                    margin: auto
+                    a
+                        font-size: 24px
+            
+            .login-signup
+                margin-top: 60px !important
+
+            .hide
+                display: none
+
+            .icon-navigation
+                display: none
+
+
+        .home-navigation ul
+            width: 100% !important
+
+        .home-navigation ul li 
+            margin-right: 10px
+

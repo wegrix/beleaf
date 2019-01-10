@@ -1,0 +1,101 @@
+<form class="contact-form"
+      (ngSubmit)="emailMessage(form.value)"
+      #form="ngForm"
+>
+  <!-- name -->
+  <div class="form-group">
+    <input
+      type="text"
+      name="name"
+      class="form-control"
+      placeholder="Your Name"
+      [(ngModel)]="name"
+      required
+      minlength="3"
+      #nameInput="ngModel"
+    >
+    <div class="alert alert-danger" *ngIf="nameInput.invalid && nameInput.dirty">
+      Name is required and needs to be at least 3 characters long.
+    </div>
+  </div>
+  <!-- email -->
+  <div class="form-group">
+    <input
+      type="email"
+      name="email"
+      class="form-control"
+      placeholder="Your Email"
+      [(ngModel)]="email"
+      required
+      email
+      #emailInput="ngModel"
+    >
+    <div class="alert alert-danger" *ngIf="emailInput.invalid && emailInput.dirty">
+      Email is required.
+    </div>
+  </div>
+  <!-- subject -->
+  <div class="form-group">
+    <input
+      type="text"
+      name="subject"
+      class="form-control"
+      placeholder="Subject"
+      [(ngModel)]="subject"
+      required
+      #subjectInput="ngModel"
+    >
+    <div class="alert alert-danger" *ngIf="subjectInput.invalid && subjectInput.dirty">
+      Subject is required.
+    </div>
+  </div>
+  <!-- message -->
+  <div class="form-group">
+        <textarea
+          class="form-control"
+          name="message"
+          placeholder="What's on your mind?"
+          rows="3"
+          [(ngModel)]="message"
+          required
+          #messageInput="ngModel"
+        ></textarea>
+    <div class="alert alert-danger" *ngIf="messageInput.invalid && messageInput.dirty">
+      Message is required.
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary contact-submit">Submit</button>
+</form>
+<div *ngIf="success; else failed">
+  <div *ngIf="form.submitted && edited && success">
+    <div class="modal-container" data-target="#modal">
+      <div class="modal-content">
+        <button type="button" class="close" aria-label="Close" (click)="closeModal()" style="color:#F4C17F; float: right; display: flex; align-self: flex-end;">
+          <img class="mail" src="../../../../../assets/icons/ios-close.svg" alt="close icon" style="width: 40px; margin: 0">
+        </button>
+        <img src="../../../../../assets/images/home/modal/logo.png" alt="logo" style="width: 50%; margin-top: 5%">
+        <p>MENSAJE ENVIADO</p>
+        <hr>
+        <p class="satisfactory">satisfactoriamente</p>
+        <img class="mail" src="../../../../../assets/icons/ios-mail-open.svg" alt="email icon">
+        <p class="soon">Pronto estaremos en contacto</p>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #failed>
+  <div *ngIf="form.submitted && edited && !success">
+    <div class="modal-container" data-target="#modal">
+      <div class="modal-content">
+        <button type="button" class="close" aria-label="Close" (click)="closeModal()" style="color:#F4C17F; float: right; display: flex; align-self: flex-end;">
+          <img class="mail" src="../../../../../assets/icons/ios-close.svg" style="width: 40px; margin: 0" alt="X icon">
+        </button>
+        <img src="../../../../../assets/images/home/modal/logo.png" alt="logo icon" style="width: 50%; margin-top: 5%">
+        <p>MENSAJE NO ENVIADO</p>
+        <hr>
+        <img class="mail" src="../../../../../assets/icons/ios-close.svg" style="width: 150px; margin: 0" alt="X icon">
+        <p class="soon" style="margin-top: 0;">¡Oops!</p>
+      </div>
+    </div>
+  </div>
+</ng-template>

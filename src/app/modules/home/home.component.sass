@@ -1,0 +1,411 @@
+@import "../../../assets/styles/abstracts/variables"
+
+.app-container
+    overflow-x: hidden
+
+     // Main Section
+    .main-picture
+      height: 500px
+      width: 100%
+      background: $main-background top center
+
+    .images-banner 
+        @extend %full-row-flex-box 
+        font-family: $default-fonts
+
+        .image-banner-item
+            position: relative
+            flex-wrap: wrap
+            width: 100%
+            margin: 0
+            padding: 0
+
+            img
+                width: 100%
+
+            p 
+                font-weight: bolder
+                position: absolute
+                width: 100%
+                height: 50%
+                overflow: auto
+                margin: auto
+                top: 0
+                left: 40%
+                bottom: 0
+                right: 40%
+
+            &:first-child 
+                color: $gold-brand
+
+    // Local Business Section
+
+    .local-business-banner
+        @extend %full-column-flex-box
+        font-family: $default-fonts
+        font-weight: lighter
+
+        .local-business-background
+          height: 500px
+          width: 100%
+          background: $local-banner-background center
+          background-size: cover
+
+          .local-business-text
+              @extend %full-column-flex-box
+              justify-content: center
+              color: $blue-brand
+
+              .transparent-background
+                  display: flex
+                  flex-direction: column
+                  background-color: rgba(255,255,255, .5)
+                  padding: 40px 0
+
+              p
+                margin: 0 0 0 8%
+                opacity: 1
+
+              hr
+                border: 1px solid $blue-brand
+                margin-left: 8%
+                width: 15%
+                text-align: left
+                float: left
+
+              .main-title
+                  font-size: 36px
+
+
+              .sub-title
+                margin: 0 0 1% 8%
+                text-align: left
+                font-size: 72px
+                font-weight: 800
+
+              .view-button
+                  opacity: 0.6
+                  color: #ffffff
+                  background-color: $blue-brand
+                  padding: 20px 5px
+                  text-align: center
+                  width: 28%
+                  font-size: 22px
+                  font-weight: 300
+                  letter-spacing: 5px
+                  margin-left: 8%
+
+    // Plant Pot Section
+
+    .plant-banner
+      background: $plant-background left
+      display: flex
+      flex-direction: column
+      height: 500px
+      width: 100vw
+      background-size: cover
+
+      .block
+            @extend %flex-center
+            float: left
+            margin-left: 20%
+
+            div
+              background-color: rgba(38, 64, 96, 0.15)
+              font-family: 'Muli', serif
+              font-weight: bolder
+              font-size: 25px
+              color: $blue-brand
+              padding: 1%
+              text-align: center
+              width: 25%
+
+    // Publicity
+
+    .publicity
+        padding: 0 !important
+
+        .ad-container 
+            @extend %flex-center  
+            height: 60vh
+            max-height: 100%
+            color: $blue-brand
+            font-weight: bolder
+            font-size: 30px
+            padding: 0
+
+        .ads
+            @extend %flex-center  
+            @include blue-background-opacity(0.69)
+            height: 60vh
+
+            &:first-child
+                @include blue-background-opacity(0.80)
+            
+                    
+        .month-deals
+            @extend %flex-center 
+            @include blue-background-opacity(0.50)
+            color: $blue-brand
+            font-weight: bolder
+            font-size: 30px
+            padding: 0
+
+    // Local Talent Section
+
+    .talent-background
+        @extend %flex-center 
+        align-items: flex-start
+        height: 60vh
+        padding-left: 30%
+        margin: 0
+        background-color: $blue-brand
+        color: $gold-brand
+        position: relative
+
+        p
+            margin: 0
+            padding: 0
+
+        hr
+            border: 1px solid $gold-brand
+            width: 7%
+            float: left
+            margin: 4px 0
+
+        .talent-background-second-subtitle
+            margin-top: 10px
+            font-weight: lighter
+
+        .down-arrow
+            position: absolute
+            top: 0
+            right: 0
+            width: 22%
+
+        .right-arrow
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 18%
+
+    
+    .talent-background-title
+        font-size: 30px
+
+    .talent-background-subtitle
+        font-size: 34px
+        font-weight: bolder
+
+    .information
+        @extend %full-row-flex-box
+        margin: 10% 0
+        justify-content: center
+        color: $blue-brand
+
+    .grey-box 
+        @extend %flex-center
+        background-color: $light-grey
+        width: 400px
+        height: 250px
+        margin-right: 8px
+        padding: 0 3.5%
+        text-align: center
+        color: $blue-brand
+
+        img 
+            margin-top: 20%
+
+        h4
+            margin-top: 20px
+
+        hr
+            border: 1px solid $blue-brand
+            width: 20%
+            float: left
+            margin: 4px 0
+
+        p
+            margin-top: 10px
+            padding-bottom: 30px
+
+    .video-container 
+        @extend %flex-center
+        height: 80vh
+        @include blue-background-opacity(0.51)
+        color: $blue-brand
+        font-weight: bolder
+        text-align: center
+        font-size: 36px
+
+    .nature-container
+        background-color: $blue-brand
+        color: $gold-brand
+        @extend %full-column-flex-box 
+        text-align: center
+        justify-content: center
+        
+        h1
+            margin: 50px 0 20px 0
+            font-weight: bolder
+            font-size: 32px
+
+        p
+            margin-bottom: 50px
+
+            a
+                color: $gold-brand
+                text-decoration: none
+        
+    
+    .form-container
+        background-color: $light-grey
+
+    .cta 
+        @extend %flex-center
+
+        .view-button
+            opacity: 0.6
+            color: #fff
+            background-color: $light-grey-blue
+            padding: 10px
+            text-align: center
+            width: 60%
+            font-size: 22px
+            font-weight: 300
+            letter-spacing: 5px
+            margin-bottom: 40px
+
+
+
+@media screen and (max-width: 35rem )
+    .images-banner
+        flex-direction: row
+        flex-wrap: wrap
+        width: 100%
+        height: 100%
+
+    .images-banner-item
+
+        img
+            width: 100%
+            height: 100%
+
+        p
+            left: 40% !important
+
+        .clothes
+            left: 47% !important
+
+    .talent-background-third-subtitle
+        margin:  0 auto 0 0 !important
+
+
+@media screen and (min-width: 20rem) and (max-width: 55rem)
+    .information
+        flex-direction: column !important
+        margin: 0 auto !important
+        padding: 0
+
+        .grey-box
+            flex-direction: column
+            margin: 10px 0
+            height: 100%
+            width: 100%
+
+            img
+                margin-top: 10%
+
+
+    .images-banner-item
+        img
+            width: 100%
+
+        p
+            left: 20% !important
+            height: 100% !important
+
+    .talent-hr
+        width: 50% !important
+
+    .video-container
+        font-size: 22px
+        margin: 0 auto
+
+    .nature-container
+        h4
+            font-size: 22px
+
+    .cta
+        margin: 20px 0
+
+
+@media screen and (max-width: 70rem)
+    .main-picture
+        background-size: cover
+        height: 400px
+        background-position: top center
+
+    .ad-container
+        height: 100% !important
+
+    .month-deals
+        flex-direction: column
+        height: 100% !important
+        justify-content: center
+        align-items: center
+
+        p
+            display: flex
+            width: 100%
+            justify-content: center
+            align-items: center
+            height: 60vh
+
+
+    .sub-title
+        font-size: 36px !important
+        height:  20% !important
+        margin-bottom: 15px !important
+
+    .view-button
+        font-size: 18px !important
+        width: 60% !important
+
+    .plant-banner
+        width: 100%
+        margin: 0 !important
+        .block
+            width: 100%
+            margin: 0 !important
+            div
+                justify-content: center
+                align-items: center
+                margin: 0
+                width: 60% !important
+
+    .talent-background
+        width: 100%
+        padding: 10px
+        margin: 0 auto 0 0
+        height: 100vh
+        justify-content: center
+        align-items: center
+
+        .talent-background-subtitle
+            font-size: 28px
+            padding: 0
+
+        .talent-background-second-subtitle
+            margin: 20px 0 10px 0
+            padding: 0
+
+        .talent-background-third-subtitle
+            margin: 0 auto
+            padding: 0
+
+    .right-arrow
+        display: none
+
+    .down-arrow
+        display: none
