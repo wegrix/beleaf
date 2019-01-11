@@ -12,7 +12,6 @@ export class ContactComponent implements OnInit {
 
   constructor(public _MessageService: MessageService) { }
   // Form Variables
-
   name: string;
   email: string;
   subject: string;
@@ -22,28 +21,40 @@ export class ContactComponent implements OnInit {
   edited = false;
   success = false;
 
+  // Utils for button
+  enabled = false;
+
   @ViewChild('form') form: NgForm;
 
   ngOnInit() {
   }
 
-  emailMessage(form) {
-    this._MessageService.sendMessage(form).subscribe(() => {
-
-      this.success = !!(this.name && (typeof this.name !== 'undefined' && this.name.length >= 3)
-        && EmailValidator.validate(this.email) && this.subject && this.message);
-
-      // Show modal
-      this.edited = true;
-
-      setTimeout(() => {
-        this.form.reset();
-      }, 2000);
-    });
+  // Resets Form
+  formReset() {
+    setTimeout(() => {
+      this.form.reset();
+    }, 2000);
   }
 
+  // Opens Modal
+  openModal() {
+    this.edited = true;
+    this.success = !!(this.name && (typeof this.name !== 'undefined' && this.name.length >= 3)
+      && EmailValidator.validate(this.email) && this.subject && this.message);
+  }
+  // Closes Modal
   closeModal() {
     this.edited = false;
   }
 
+  enableButton() {
+      this.enabled = true;
+  }
+
+  emailMessage(form) {
+    this._MessageService.sendMessage(form).subscribe(() => {
+      this.openModal();
+      this.formReset();
+    });
+  }
 }

@@ -59,12 +59,13 @@
           [(ngModel)]="message"
           required
           #messageInput="ngModel"
+          (click)="enableButton()"
         ></textarea>
     <div class="alert alert-danger" *ngIf="messageInput.invalid && messageInput.dirty">
       Message is required.
     </div>
   </div>
-  <button type="submit" class="btn btn-primary contact-submit">Submit</button>
+  <button type="submit" class="btn btn-primary contact-submit" [disabled]="!enabled">Submit</button>
 </form>
 <div *ngIf="success; else failed">
   <div *ngIf="form.submitted && edited && success">

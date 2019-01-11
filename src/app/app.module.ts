@@ -27,7 +27,7 @@ import { SignupComponent } from './modules/authentication/signup/signup.componen
     FooterComponent,
     ContactComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
