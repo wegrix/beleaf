@@ -110,10 +110,14 @@
       <div class="nature-container">
         <h1>Somos Nature Friendly - Somos Be-leaf</h1>
         <p>
-          <a href="https://www.instagram.com/beleaf_design/" rel="noreferrer" target="_blank">#naturefriendlydesign</a>
-          |<a href="https://www.instagram.com/beleaf_design/" rel="noreferrer" target="_blank">#ecofriendlydesign</a>
-          |<a href="https://www.instagram.com/beleaf_design/" rel="noreferrer" target="_blank">#localdesign</a>
-          |<a href="https://www.instagram.com/beleaf_design/" rel="noreferrer" target="_blank">#beleafdesign</a></p>
+          <a class="social"
+             *ngFor="let social of instagrams"
+             rel="noreferrer"
+             href="{{social.url}}"
+             target="_blank">
+            {{social.name}}
+          </a>
+        </p>
       </div>
     </div>
   </div>
