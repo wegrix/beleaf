@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyDk9RUpmmE2S36-1mAIrTDb9kDdFrN8bP8',
-    authDomain: 'beleaf-designs.firebaseapp.com',
-    databaseURL: 'https://beleaf-designs.firebaseio.com',
-    projectId: 'beleaf-designs',
-    storageBucket: 'beleaf-designs.appspot.com',
-    messagingSenderId: '24876280044'
+    apiKey: 'AIzaSyAo658WsYY-y2kdDWWK-sJQSsaJgfJUIx8',
+    authDomain: 'beleafdesign-001.firebaseapp.com',
+    databaseURL: 'https://beleafdesign-001.firebaseio.com',
+    projectId: 'beleafdesign-001',
+    storageBucket: 'beleafdesign-001.appspot.com',
+    messagingSenderId: '358810540263'
   }
 };
 

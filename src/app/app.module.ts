@@ -17,6 +17,10 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { LoginComponent } from './modules/authentication/login/login.component';
 import { SignupComponent } from './modules/authentication/signup/signup.component';
+import { ModalComponent } from './modules/home/shared/modal/modal.component';
+import {AngularFireModule} from "@angular/fire";
+import {AngularFirestoreModule} from "@angular/fire/firestore";
+import {AngularFireAuthModule} from "@angular/fire/auth";
 
 
 @NgModule({
@@ -28,12 +32,16 @@ import { SignupComponent } from './modules/authentication/signup/signup.componen
     ContactComponent,
     LoginComponent,
     SignupComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    AngularFireModule,
+    AngularFirestoreModule, // imports firebase/firestore, only needed for database features
+    AngularFireAuthModule, // imports firebase/auth, only needed for auth features
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [MessageService],

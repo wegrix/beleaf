@@ -1,0 +1,16 @@
+<div *ngIf="edited">
+  <div class="modal-container" data-target="#modal">
+    <div class="modal-content">
+      <button type="button" class="close" aria-label="Close" (click)="closeModal()" style="color:#F4C17F; float: right; display: flex; align-self: flex-end;">
+        <img class="mail" src="../../../../../assets/icons/ios-close.svg" alt="close icon" style="width: 40px; margin: 0">
+      </button>
+      <img src="../../../../../assets/images/home/modal/logo.png" alt="logo" style="width: 50%; margin-top: 5%">
+      <p>{{element.header}}</p>
+      <hr>
+      <p class="satisfactory">{{element.message}}</p>
+      <img class="mail" [src]="element.image" alt="email icon">
+      <p class="soon">{{element.footer}}</p>
+    </div>
+  </div>
+</div>
+

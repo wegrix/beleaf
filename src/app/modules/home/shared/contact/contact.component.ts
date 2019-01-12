@@ -17,10 +17,15 @@ export class ContactComponent implements OnInit {
   subject: string;
   message: string;
 
-  // Utils for modal
-  edited = false;
   success = false;
+  edited = false;
 
+  modal: any = {
+    header: '',
+    message: '',
+    footer: '',
+    image: ''
+  };
   // Utils for button
   enabled = false;
 
@@ -38,13 +43,33 @@ export class ContactComponent implements OnInit {
 
   // Opens Modal
   openModal() {
-    this.edited = true;
-    this.success = !!(this.name && (typeof this.name !== 'undefined' && this.name.length >= 3)
-      && EmailValidator.validate(this.email) && this.subject && this.message);
-  }
-  // Closes Modal
-  closeModal() {
-    this.edited = false;
+
+    if (this.name && (typeof this.name !== 'undefined' && this.name.length >= 3)
+      && EmailValidator.validate(this.email) && this.subject && this.message) {
+
+      this.success = true;
+      this.edited = true;
+
+      this.modal = {
+        header: 'MENSAJE ENVIADO',
+        message: 'satisfactoriamente',
+        footer: 'Pronto estaremos en contacto',
+        image: '../../../../../assets/icons/ios-mail-open.svg',
+      };
+
+    } else {
+
+      this.success = false;
+      this.edited = true;
+
+      this.modal = {
+        header: 'MENSAJE NO ENVIADO',
+        message: '',
+        footer: '¡Oops!',
+        image: '../../../../../assets/icons/ios-close.svg',
+      };
+
+    }
   }
 
   enableButton() {

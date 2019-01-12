@@ -59,7 +59,7 @@
           [(ngModel)]="message"
           required
           #messageInput="ngModel"
-          (click)="enableButton()"
+          (focus)="enableButton()"
         ></textarea>
     <div class="alert alert-danger" *ngIf="messageInput.invalid && messageInput.dirty">
       Message is required.
@@ -67,36 +67,12 @@
   </div>
   <button type="submit" class="btn btn-primary contact-submit" [disabled]="!enabled">Submit</button>
 </form>
-<div *ngIf="success; else failed">
-  <div *ngIf="form.submitted && edited && success">
-    <div class="modal-container" data-target="#modal">
-      <div class="modal-content">
-        <button type="button" class="close" aria-label="Close" (click)="closeModal()" style="color:#F4C17F; float: right; display: flex; align-self: flex-end;">
-          <img class="mail" src="../../../../../assets/icons/ios-close.svg" alt="close icon" style="width: 40px; margin: 0">
-        </button>
-        <img src="../../../../../assets/images/home/modal/logo.png" alt="logo" style="width: 50%; margin-top: 5%">
-        <p>MENSAJE ENVIADO</p>
-        <hr>
-        <p class="satisfactory">satisfactoriamente</p>
-        <img class="mail" src="../../../../../assets/icons/ios-mail-open.svg" alt="email icon">
-        <p class="soon">Pronto estaremos en contacto</p>
-      </div>
-    </div>
-  </div>
+<div *ngIf="form.submitted">
+  <app-modal
+    [modal]="modal"
+    [edited]="edited"
+    [success]="success"
+    (editChange)="edited = $event"
+    >
+  </app-modal>
 </div>
-<ng-template #failed>
-  <div *ngIf="form.submitted && edited && !success">
-    <div class="modal-container" data-target="#modal">
-      <div class="modal-content">
-        <button type="button" class="close" aria-label="Close" (click)="closeModal()" style="color:#F4C17F; float: right; display: flex; align-self: flex-end;">
-          <img class="mail" src="../../../../../assets/icons/ios-close.svg" style="width: 40px; margin: 0" alt="X icon">
-        </button>
-        <img src="../../../../../assets/images/home/modal/logo.png" alt="logo icon" style="width: 50%; margin-top: 5%">
-        <p>MENSAJE NO ENVIADO</p>
-        <hr>
-        <img class="mail" src="../../../../../assets/icons/ios-close.svg" style="width: 150px; margin: 0" alt="X icon">
-        <p class="soon" style="margin-top: 0;">¡Oops!</p>
-      </div>
-    </div>
-  </div>
-</ng-template>
