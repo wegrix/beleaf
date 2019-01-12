@@ -9,7 +9,6 @@ export class ModalComponent implements OnInit {
 
   @Input() modal: { header: string, message: string, footer: string, image: string };
   @Input() edited: boolean;
-  @Input() success: boolean;
   @Output() editChange: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
