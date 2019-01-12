@@ -41,6 +41,11 @@ export class ContactComponent implements OnInit {
     }, 2000);
   }
 
+  // Changes edited value for child component
+  onEditChanged(edit) {
+    this.edited = edit; // We are getting the edited value from the child component
+  }
+
   // Opens Modal
   openModal() {
 
@@ -76,10 +81,15 @@ export class ContactComponent implements OnInit {
       this.enabled = true;
   }
 
+  disableButton() {
+    this.enabled = false;
+  }
+
   emailMessage(form) {
     this._MessageService.sendMessage(form).subscribe(() => {
       this.openModal();
       this.formReset();
+      this.disableButton();
     });
   }
 }

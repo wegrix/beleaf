@@ -20,6 +20,6 @@ export class ModalComponent implements OnInit {
   // Closes Modal
   closeModal() {
     this.edited = false;
-    this.editChange.emit(this.edited);
+    this.editChange.emit(this.edited); // Here we are telling the child component to emit the edited value to the parent
   }
 }
