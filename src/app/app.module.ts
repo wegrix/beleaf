@@ -18,9 +18,9 @@ import { environment } from '../environments/environment';
 import { LoginComponent } from './modules/authentication/login/login.component';
 import { SignupComponent } from './modules/authentication/signup/signup.component';
 import { ModalComponent } from './modules/home/shared/modal/modal.component';
-import {AngularFireModule} from "@angular/fire";
-import {AngularFirestoreModule} from "@angular/fire/firestore";
-import {AngularFireAuthModule} from "@angular/fire/auth";
+import {AngularFireModule} from '@angular/fire';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {AngularFireAuthModule} from '@angular/fire/auth';
 
 
 @NgModule({

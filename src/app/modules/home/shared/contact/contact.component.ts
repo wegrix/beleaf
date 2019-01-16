@@ -2,6 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import { MessageService } from './message.service';
 import * as EmailValidator from 'email-validator';
 import {NgForm} from '@angular/forms';
+import {Modal} from '../modal/modal';
 
 @Component({
   selector: 'app-contact',
@@ -20,12 +21,7 @@ export class ContactComponent implements OnInit {
   success = false;
   edited = false;
 
-  modal: any = {
-    header: '',
-    message: '',
-    footer: '',
-    image: ''
-  };
+  modal: Modal;
   // Utils for button
   enabled = false;
 

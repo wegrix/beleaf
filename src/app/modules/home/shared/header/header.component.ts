@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Header } from './header';
 
 @Component({
   selector: 'app-header',
@@ -6,11 +7,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.sass']
 })
 export class HeaderComponent implements OnInit {
-  show = true;
+  show = false;
+  header: Header[];
 
   constructor() { }
 
   ngOnInit() {
+    this.header = [
+      {
+      url: '/',
+      name: 'Home'
+      },
+      {
+        url: '/',
+        name: 'Tienda'
+      },
+      {
+        url: '/',
+        name: 'Novedades'
+      },
+      {
+        url: '/',
+        name: 'Blog'
+      },
+    ];
   }
 
   showX() {

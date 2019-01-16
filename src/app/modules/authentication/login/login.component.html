@@ -13,9 +13,9 @@
         <p>Accede</p>
         <p>y conoce más de nuestro talento</p>
       </div>
-      <form class="login-form">
-        <input type="email" name="email" class="email" placeholder="Correo Electrónico">
-        <input type="password" name="password" class="password" placeholder="Contraseña">
+      <form class="login-form" #form="ngForm">
+        <input type="email" name="email" class="email" placeholder="Correo Electrónico" [(ngModel)]="email">
+        <input type="password" name="password" class="password" placeholder="Contraseña" [(ngModel)]="password">
         <div class="social-login">
           <div class="facebook">
             <p>Accede con <br>Facebook</p>
@@ -29,6 +29,9 @@
             <p>Accede con <br>Twitter</p>
             <img src="../../../../assets/images/users/signup/icons/twitter.png" alt="twitter logo">
           </div>
+        </div>
+        <div>
+          <button class="btn btn-primary" type="submit">Accede con correo</button>
         </div>
         <div class="checkbox">
           <label>

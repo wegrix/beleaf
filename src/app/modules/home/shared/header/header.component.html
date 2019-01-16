@@ -5,19 +5,18 @@
         <nav class="home-navigation">
           <div class="logo"></div>
           <div class="hamburger-icon" (click)="showX()">
-            <i [ngClass]="show ? 'fas fa-bars' : 'fas fa-times'"  class="fas fa-bars fa-2x"></i>
+            <i [ngClass]="show ? 'fas fa-times' : 'fas fa-bars'"  class="fas fa-bars fa-2x"></i>
           </div>
-          <ul [ngClass]="!show ? 'show' : 'hide'" >
-            <li><a routerLink="/">Home</a></li>
-            <li><a href="#">Tienda</a></li>
-            <li><a href="#">Novedades</a></li>
-            <li><a href="#">Blog</a></li>
+          <ul [ngClass]="show ? 'show' : 'hide'">
+            <li *ngFor="let link of header">
+              <a [routerLink]="link.url">{{ link.name }}</a>
+            </li>
             <li class="login-signup">
               <a routerLink="/login">Login |</a>
               <a routerLink="/signup">SignUp</a>
             </li>
           </ul>
-          <div [ngClass]="!show ? 'show' : 'hide'" class="icon-navigation">
+          <div class="icon-navigation">
             <div>
               <img src="../../../assets/icons/ios-search.svg" alt="search icon" />
               <img src="../../../assets/icons/ios-star.svg" alt="star icon" />
