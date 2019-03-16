@@ -18,9 +18,9 @@
     gtag('config', 'UA-134921345-1');
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
     crossorigin="anonymous">
-  <link rel="manifest" href="manifest.json">
   <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
   <meta name="theme-color" content="#1976d2">
   <meta name="description" content="Beleafdesign is a startup company based in Colombia that wants to inspire designers to create more work and be able to profit from it.">
@@ -225,21 +225,27 @@
 
 <body>
   <app-root>
-    <div class="sk-folding-cube">
-      <div class="sk-cube1 sk-cube"></div>
-      <div class="sk-cube2 sk-cube"></div>
-      <div class="sk-cube4 sk-cube"></div>
-      <div class="sk-cube3 sk-cube"></div>
-    </div>
+    <div class="app-root">
+      <div class="sk-folding-cube">
+        <div class="sk-cube1 sk-cube"></div>
+        <div class="sk-cube2 sk-cube"></div>
+        <div class="sk-cube4 sk-cube"></div>
+        <div class="sk-cube3 sk-cube"></div>
+      </div>
 
-    <div id="box">
-      <div id="tile01">
-        <div id="mask">Beleaf</div>
+      <div id="box">
+        <div id="tile01">
+          <div id="mask">Beleaf</div>
+        </div>
       </div>
     </div>
-
   </app-root>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
+  <script>
+    window.addEventListener("load", function (event) {
+      document.querySelector('.app-root').style.display = 'none';
+    })
+  </script>
 </body>
 
 </html>
