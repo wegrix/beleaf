@@ -224,7 +224,7 @@
 </head>
 
 <body>
-  <app-root>
+  <div class="app-root">
     <div class="sk-folding-cube">
       <div class="sk-cube1 sk-cube"></div>
       <div class="sk-cube2 sk-cube"></div>
@@ -237,11 +237,13 @@
         <div id="mask">Beleaf</div>
       </div>
     </div>
+  </div>
+  <app-root>
   </app-root>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
   <script>
     window.addEventListener("load", function (event) {
-      document.querySelector('app-root').style.display = 'none';
+      document.querySelector('.app-root').style.display = 'none';
     })
   </script>
 </body>
