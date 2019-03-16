@@ -1,0 +1,54 @@
+<div class="row" style="height: 100vh">
+  <div class="col-lg-6 col-md-6 col-sm-12" style="background: hsl(213, 43%, 26%); padding: 0;">
+    <img class="right-arrow" src="../../../../assets/images/home/banner/right-arrow.png" alt="right arrow" />
+    <div class="poly">
+      <div class="login-background"></div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-12" style="padding: 0;">
+    <div class="blue-background">
+      <img class="down-arrow" src="../../../../assets/images/users/login/down.png" alt="down arrow" />
+      <a [routerLink]="['/']">
+        <img class="logo" src="../../../../assets/images/users/login/logo.png" alt="logo" />
+      </a>
+      <div class="talent">
+        <p>Accede y conoce más de nuestro talento</p>
+      </div>
+      <form class="login-form" #loginForm="ngForm" (ngSubmit)="signIn()">
+        <div style="width: 70%; text-align: center;" *ngIf="userError">
+          {{ userError }}
+        </div>
+        <input type="email" name="email" class="email" placeholder="Correo Electrónico" [(ngModel)]="user.email"
+          (change)="user.email = $event.target.value" />
+        <input type="password" name="password" class="password" placeholder="Contraseña" [(ngModel)]="user.password"
+          (change)="user.password = $event.target.value" />
+        <div class="social-login">
+          <div class="facebook" (click)="facebookSignIn()">
+            <p>Accede con Facebook</p>
+            <img src="../../../../assets/images/users/signup/icons/facebook-blue.png" alt="facebook logo" />
+          </div>
+          <div class="google" (click)="googleSignIn()">
+            <p>Accede con Google</p>
+            <img src="../../../../assets/images/users/signup/icons/google.png" alt="google logo" />
+          </div>
+        </div>
+        <div class="checkbox">
+          <label for="rememberme">
+            <input type="checkbox" id="rememberme" name="rememberme" checked="true"
+              (change)="rememberUser = !rememberUser" />
+            Recordar Login
+          </label>
+          <div (click)="passwordReset()" style="cursor: pointer">
+            Recuperar contraseña
+          </div>
+        </div>
+        <div style="width: 70%;">
+          <button class="submit-button" type="submit" [disabled]="!loginForm.form.valid"
+            (click)="rememberUser ? saveLogin() : deleteLogin()" style="margin-bottom: 20px">
+            Acceder
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

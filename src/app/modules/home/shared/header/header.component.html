@@ -1,0 +1,43 @@
+<div>
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <header class="home-header">
+        <nav class="home-navigation">
+          <div class="logo"></div>
+          <div class="hamburger-icon" (click)="showX()">
+            <i [ngClass]="show ? 'fas fa-times' : 'fas fa-bars'" class="fas fa-bars fa-2x"></i>
+          </div>
+          <ul [ngClass]="show ? 'show' : 'hide'">
+            <li *ngFor="let link of header">
+              <a [routerLink]="link.url">{{ link.name }}</a>
+            </li>
+            <li class="login-signup">
+              <a routerLink="/login">Login |</a>
+              <a routerLink="/signup">SignUp</a>
+            </li>
+          </ul>
+          <div class="icon-navigation">
+            <div>
+              <img src="../../../assets/icons/ios-search.svg" alt="search icon" />
+              <img src="../../../assets/icons/ios-star.svg" alt="star icon" />
+              <img src="../../../assets/icons/ios-cart.svg" alt="cart icon" />
+            </div>
+          </div>
+          <div class="user-header" style="flex-direction:column" *ngIf="(authentication.user | async) as user"
+            (mouseenter)="dropdown = true" (mouseleave)="dropdown = false">
+            <a aria-haspopup="true" aria-expanded="false" id="dropdownMenuLink">
+              <img src="{{ user.photoURL }}" class="profile-picture" />
+              <div>{{ user.displayName }}</div>
+            </a>
+            <div *ngIf="dropdown" [ngClass]="show && dropdown ? 'dropdown-expanded': ''" class="dropdown">
+              <a class="link" routerLink="/dashboard/user/{{user.uid}}">Dashboard</a>
+              <a class="link" href="#">Wishlist</a>
+              <a class="link" href="#">Orders</a>
+              <a class="link" (click)="signOut()">Sign out</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+@import "../../../../../assets/styles/abstracts/variables";
+
+.edit-container {
+    border: 1px solid $blue-brand;
+    padding: 1rem 0;
+
+    h1 {
+        font-weight: bolder;
+    }
+
+    label {
+        margin: 0 1.2rem;
+        font-weight: lighter;
+    }
+
+    .notification-input {
+        display: flex;
+        align-items: center;
+
+        .question-mark {
+            width: 1.2rem;
+        }
+    }
+
+    h1, .notification-input {
+        margin: 1rem 3rem;
+    }
+
+    .comments {
+        display: flex;
+        justify-content: center;
+    }
+}

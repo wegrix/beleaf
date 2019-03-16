@@ -1,0 +1,27 @@
+<div class="publicity-container" id="publicity">
+  <div class="col-lg-4 col-md-12 col-sm-12" *ngFor="let publicity of publicityAds; let i = index">
+    <div class="publicity-box">
+      <h3>{{publicity.tier}}</h3>
+      <div class="publicity-box-background">
+        <h5>¿Que incluye?</h5>
+        <div class="calendar-section">
+          <img class="calendar-icon" src="../../../../assets/images/users/dashboard/1x/calendar.png" alt="calendar">
+          <small>Posteo (R)</small>
+        </div>
+        <div class="calendar-week-section">
+          <p>{{publicity.week}} Semana</p>
+          <p>{{publicity.weeks}} Semanas</p>
+          <p>{{publicity.months}} Mes</p>
+        </div>
+        <div class="calendar-price">
+          <h5>Precio</h5>
+          <p>{{publicity.price}}</p>
+        </div>
+        <div class="calendar-email-section" (click)="sendAdNotification(publicity.price)">
+          <img src="../../../../assets/images/users/dashboard/1x/email.png" alt="email">
+          <p>Enviar Solicitud</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

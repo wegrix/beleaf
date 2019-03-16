@@ -1,0 +1,119 @@
+@import "../../../../../assets/styles/abstracts/variables";
+
+* {
+    color: $blue-brand;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.pen {
+    margin: 0 10px;
+    color: hsl(180, 11.8%, 75.1%);
+    font-size: 1.1rem;
+}
+
+.col-lg-4 {
+    padding: 0.3rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid $blue-brand;
+    position: relative;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+textarea {
+    margin: 1rem 0;
+    position: relative;
+}
+
+.edit-container {
+    border: 1px solid $blue-brand;
+    padding: 2rem;
+}
+
+.publicity-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    .publicity-box {
+        max-width: 100%;
+        .publicity-box-background {
+            background-color: hsl(226.2, 26.5%, 90.4%);
+            width: 100%;
+            h5 {
+                padding: 1.8rem 0;
+                margin: 0;
+                font-weight: 300;
+                font-size: 24px;
+            }
+            .calendar-section {
+                display: flex;
+                align-items: center;
+                padding: 1rem 1.2rem;
+                .calendar-icon {
+                    height: 30px;
+                    vertical-align: middle;
+                    margin: 0 10px;
+                }
+            }
+            .calendar-week-section {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin: 0;
+                padding: 0 1.8rem;
+                p {
+                    font-size: 16px;
+                    margin: 0;
+                }
+            }
+            .calendar-price {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin: 0;
+                padding: 0 1.8rem;
+                p {
+                    font-size: 16px;
+                    margin: 0;
+                }
+                h5 {
+                    padding: 1rem 0 0 0;
+                }
+            }
+            .calendar-email-section {
+                margin: 30% 0 0 0;
+                padding: 8% 0;
+                img {
+                    width: 48px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 60rem) {
+    .publicity-container {
+        flex-direction: column;
+        .calendar-email-section {
+            margin: 10% 0 0 0 !important;
+            padding: 0;
+        }
+    }
+}

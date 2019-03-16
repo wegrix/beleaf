@@ -1,0 +1,34 @@
+<div class="row">
+  <header>
+    <nav class="dashboard-nav">
+      <div class="logo-container">
+        <a routerLink="/">
+          <img class="logo" src="../../../../../assets/images/users/dashboard/logo.png" alt="logo">
+        </a>
+      </div>
+      <div class="hamburger-icon" (click)="showX()">
+        <i [ngClass]="show ? 'fas fa-times' : 'fas fa-bars'" class="fas fa-bars fa-2x"></i>
+      </div>
+      <ul [ngClass]="show ? 'show' : 'hide'">
+        <li>Dashboard</li>
+        <li>Mis productos</li>
+        <li>
+          Categorias
+          <span><i class="fas fa-bars"></i></span>
+        </li>
+      </ul>
+      <div *ngIf="(auth.user | async) as user" class="profile">
+        <img src="{{ user.photoURL }}" alt="" class="profile-picture">
+        <p>{{user.displayName}}</p>
+      </div>
+      <ul class="icon-container">
+        <li>
+          <img src="../../../../../assets/images/users/dashboard/1x/search.png" alt="search icon" />
+        </li>
+        <li>
+          <img src="../../../../../assets/images/users/dashboard/1x/star.png" alt="star icon" />
+        </li>
+      </ul>
+    </nav>
+  </header>
+</div>

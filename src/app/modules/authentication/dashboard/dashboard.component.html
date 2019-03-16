@@ -1,0 +1,70 @@
+<app-dashboard-header></app-dashboard-header>
+<app-dashboard-main-links></app-dashboard-main-links>
+<div class="container" *ngIf="(authenticated.user | async) as user">
+    <div class="row">
+        <div class="config">
+            <h4>Configuración de cuenta</h4>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12">
+            <nav>
+                <ul>
+                    <li *ngFor="let link of links" (click)="showCaret(link)">
+                        <i *ngIf="link.isOpen" class="fas fa-caret-right caret"></i>
+                        <a href="dashboard/user/{{user.uid}}{{link.url}}">{{link.name}}</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="edit-container" *ngIf="links[0].isOpen">
+                <div class="form-section">
+                    <h2>Editar Perfil</h2>
+                    <div class="profile-picture-edit">
+                        <img src="{{ user.photoURL }}" alt="" class="profile-picture">
+                        <small>Editar <i class="fas fa-pen pen"></i></small>
+                    </div>
+                </div>
+                <form class="edit-profile" id="perfil">
+                    <div *ngFor="let profileInput of profileInputs; let i = index">
+                        <label>
+                            {{profileInput.label}}
+                            <input [type]="profileInput.type" [id]="profileInput.id" [value]="profileInput.value">
+                            <i class="fas fa-pen pen">
+                            </i>
+                        </label>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <label> Telefono
+                                <input type="tel" id="tel">
+                                <i class="fas fa-pen pen-half-width"></i>
+                            </label>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <label> Celular
+                                <input type="tel" id="tel">
+                                <i class="fas fa-pen pen-half-width"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <label>Biografia <i class="fas fa-pen label-pen"></i></label>
+                    <textarea maxlength="120" rows="5"></textarea>
+                </form>
+            </div>
+            <!-- Blog -->
+            <app-dashboard-blog *ngIf="links[1].isOpen"></app-dashboard-blog>
+            <!-- Publicity -->
+            <app-dashboard-publicity *ngIf="links[2].isOpen"></app-dashboard-publicity>
+            <!-- Paypal -->
+            <div class="payment-container" id="paypal" *ngIf="links[3].isOpen">
+                <p>payment</p>
+            </div>
+            <!-- Notifications -->
+            <app-dashboard-notifications *ngIf="links[4].isOpen"></app-dashboard-notifications>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

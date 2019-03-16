@@ -1,0 +1,462 @@
+@import "../../../assets/styles/abstracts/variables";
+
+.app-container {
+    overflow-x: hidden;
+
+    // Main Section
+
+    .main-picture {
+        height: 500px;
+        width: 100%;
+        background: $main-background top center;
+    }
+
+    .images-banner {
+        @extend %full-row-flex-box;
+        font-family: $default-fonts;
+
+        @include sm {
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100%;
+        }
+
+        .image-banner-item {
+            position: relative;
+            flex-wrap: wrap;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+
+            img {
+                width: 100%;
+                @include sm {
+                    height: 100%;
+                }
+            }
+
+            p {
+                font-weight: bolder;
+                position: absolute;
+                width: 100%;
+                height: 50%;
+                overflow: auto;
+                margin: auto;
+                top: 0;
+                left: 40%;
+                bottom: 0;
+                right: 40%;
+                @include md {
+                    left: 20%;
+                }
+                @include sm {
+                    left: 40%;
+                }
+            } 
+
+            &:first-child {
+                color: $gold-brand
+            }
+
+            .clothes {
+                @include md {
+                    left: 35%;
+                }
+                @include sm {
+                    left: 47%;
+                }
+            }
+        }
+    }
+
+    // Local Business Section
+
+    .local-business-banner {
+        @extend %full-column-flex-box;
+        font-family: $default-fonts;
+        font-weight: lighter;
+        .local-business-background {
+            height: 500px;
+            width: 100%;
+            background: $local-banner-background center;
+            background-size: cover;
+            .local-business-text {
+                @extend %full-column-flex-box;
+                justify-content: center;
+                color: $blue-brand;
+                .transparent-background {
+                    display: flex;
+                    flex-direction: column;
+                    background-color: rgba(255,255,255, .5);
+                    padding: 40px 0;
+
+                    p {
+                        margin: 0 0 0 8%;
+                        opacity: 1;
+                    }
+            
+                    hr {
+                        border: 1px solid $blue-brand;
+                        margin-left: 8%;
+                        width: 15%;
+                        text-align: left;
+                        float: left;
+                    }
+            
+                    .main-title {
+                        font-size: 36px;
+                    }
+
+                    .sub-title {
+                        margin: 0 0 1% 8%;
+                        text-align: left;
+                        font-size: 72px;
+                        font-weight: 800;
+                        @include xl {
+                            font-size: 36px;
+                            height:  20%;
+                            margin-bottom: 15px;
+                        }
+                    }
+                
+                    .view-button {
+                        opacity: 0.6;
+                        color: #ffffff;
+                        background-color: $blue-brand;
+                        padding: 20px 5px;
+                        text-align: center;
+                        width: 28%;
+                        font-size: 22px;
+                        font-weight: 300;
+                        letter-spacing: 5px;
+                        margin-left: 8%;
+                        @include md {
+                            width: 60%;
+                            margin-top: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Plant Pot Section
+
+    .plant-banner {
+        background: $plant-background left;
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+        width: 100vw;
+        background-size: cover;
+        @include xl {
+            width: 100%;
+            margin: 0;
+        }
+        .block {
+            @extend %flex-center;
+            float: left;
+            margin-left: 20%;
+            @include xl {
+                width: 100%;
+                margin: 0;
+            }
+            div {
+                background-color: rgba(38, 64, 96, 0.15);
+                font-family: 'Muli', serif;
+                font-weight: bolder;
+                font-size: 25px;
+                color: $blue-brand;
+                padding: 1%;
+                text-align: center;
+                width: 25%;
+                @include xl {
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0;
+                    width: 60%;
+                }
+            }
+        }
+    }
+
+    // Publicity Section
+
+    .publicity {
+        padding: 0;
+        .month-deals {
+            @extend %flex-center;
+            @include blue-background-opacity(0.50);
+            height: 55vh;
+            color: $blue-brand;
+            font-weight: bolder;
+            font-size: 30px;
+            padding: 0;
+            @include xl {
+                flex-direction: column;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+            p {
+                @include xl {
+                    display: flex;
+                    height: 55vh;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+        .ad-container {
+            @extend %flex-center;
+            max-height: 100%;
+            color: $blue-brand;
+            font-weight: bolder;
+            font-size: 30px;
+            padding: 0;
+            @include xl {
+                height: 100%;
+            }
+            @include md {
+                height: 55vh;
+            }
+            .ads {
+                @extend %flex-center;
+                @include blue-background-opacity(0.69);
+                &:first-child {
+                    @include blue-background-opacity(0.80);
+                }
+            }
+        }
+
+    }
+
+
+
+    // Local Talent Section
+
+    .talent-background {
+        @extend %flex-center;
+        align-items: flex-start;
+        height: 60vh;
+        padding-left: 30%;
+        margin: 0;
+        background-color: $blue-brand;
+        color: $gold-brand;
+        position: relative;
+        @include lg {
+            width: 100%;
+            padding: 0 10%;
+            margin: 0 auto 0 0;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .talent-background-title {
+            font-size: 30px;
+            width: 100%;
+        }
+        
+        .talent-background-subtitle {
+            font-size: 34px;
+            font-weight: bolder;
+            width: 100%;
+            @include xl {
+                font-size: 28px;
+                padding: 0;
+            }
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        
+        hr {
+            border: 1px solid $gold-brand;
+            width: 7%;
+            float: left;
+            margin: 4px 0;
+            @include lg { 
+                width: 50%;
+                display: none;
+            }
+        }
+
+        .talent-background-second-subtitle {
+            margin-top: 10px;
+            font-weight: lighter;
+            @include xl {
+                margin: 20px 0 10px 0;
+                padding: 0;
+            }
+        }
+
+        .talent-background-third-subtitle {
+            @include xl {
+                padding: 0;
+            }
+            @include sm {
+                margin:  0 auto 0 0;
+            }
+        }
+        
+        .down-arrow {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 22%;
+            @include lg {
+                display: none
+            }
+        }
+        
+        .right-arrow {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 18%;
+            @include lg {
+                display: none
+            }
+        }
+        
+    }
+
+
+    // Marketing Area
+
+    .information {
+        @extend %full-row-flex-box;
+        margin: 10% 0;
+        justify-content: center;
+        color: $blue-brand;
+        @include lg {
+            flex-direction: column;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .grey-box {
+            @extend %flex-center;
+            background-color: $light-grey;
+            width: 400px;
+            height: 250px;
+            margin-right: 8px;
+            padding: 0 3.5%;
+            text-align: center;
+            color: $blue-brand;
+            @include lg {
+                flex-direction: column;
+                margin: 10px 0;
+                height: 100%;
+                width: 100%;
+            }
+
+            img {
+                margin-top: 20%;
+            }
+
+            h4 {
+                margin-top: 20px;
+            }
+
+
+            hr {
+                border: 1px solid $blue-brand;
+                width: 20%;
+                float: left;
+                margin: 4px 0;
+            }
+
+
+            p {
+                margin-top: 10px;
+                padding-bottom: 30px;
+            }
+        }
+    }
+
+    // Video Concept
+
+    .video-container {
+        @extend %flex-center;
+        height: 80vh;
+        @include blue-background-opacity(0.51);
+        color: $blue-brand;
+        font-weight: bolder;
+        text-align: center;
+        font-size: 36px;
+        @include lg {
+            font-size: 22px;
+            margin: 0 auto;
+        }
+    }
+
+    // Quote and Social Media Section
+
+    .nature-container {
+        background-color: $blue-brand;
+        color: $gold-brand;
+        @extend %full-column-flex-box;
+        text-align: center;
+        justify-content: center;
+
+        h1 {
+            margin: 28px 0 20px 0;
+            font-weight: bolder;
+            font-size: 32px;
+            @include lg {
+                font-size: 22px;
+            }
+        }
+
+        p {
+            margin-bottom: 50px;
+            .social {
+                color: $gold-brand;
+                border-right: 1px solid;
+                padding: 0 8px;
+                text-decoration: none;
+                &:last-child {
+                    border-right: none;
+                }
+            }
+        }
+    } 
+    
+    // Form
+
+    .form-container {
+        background-color: $light-grey;
+    }
+
+    // Call to action
+
+    .cta {
+        @extend %flex-center;
+        @include lg {
+            margin: 20px 0;
+        }
+    }
+
+    .view-button {
+        text-decoration: none;
+        opacity: 0.6;
+        color: #fff;
+        background-color: $light-grey-blue;
+        padding: 10px;
+        text-align: center;
+        width: 60%;
+        font-size: 22px;
+        font-weight: 300;
+        letter-spacing: 5px;
+        margin-bottom: 40px;
+        @include xl {
+            font-size: 18px;
+            width: 60%;
+        }
+    }
+}

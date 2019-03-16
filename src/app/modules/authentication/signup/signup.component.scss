@@ -1,0 +1,258 @@
+.white-background, .white-background .login-form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  
+  .signup-background {
+    width: 100%;
+    height: 100%;
+    background-size: cover !important;
+    background: url(../../../../assets/images/users/signup/signup.jpg) no-repeat center;
+    position: relative;
+  }
+  
+  .white-background .social-login .facebook, .white-background .social-login .google, .white-background .social-login .twitter {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+    width: 38%;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 6px;
+    padding: 8px 0;
+  }
+  
+  .col-lg-6 {
+    position: relative;
+  }
+  
+  .poly {
+    height: 100%;
+    -webkit-clip-path: polygon(0 0, 95% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 95% 0, 100% 100%, 0% 100%);
+  }
+  
+  .right-arrow {
+    position: absolute;
+    bottom: 0;
+    right: -88px;
+    width: 14%;
+    z-index: 2;
+  }
+  
+  .white-background {
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .white-background .down-arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24%;
+  }
+  .white-background .logo {
+    width: 140px;
+    height: 100px;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .white-background a {
+    text-align: center;
+  }
+
+  .white-background .talent {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    color: #263f5f;
+    font-size: 19px;
+    font-family: "Muli", "Asgalt", "Helvetica", sans-serif;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 40px;
+  }
+  .white-background .talent p {
+    margin: 0;
+  }
+  .white-background .login-form {
+    position: relative;
+    margin: 50px 0 20px 0;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .white-background .social-login {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 72%;
+    height: initial;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-weight: 300;
+    font-size: 14px;
+  }
+  .white-background .social-login .facebook {
+    color: #fff;
+    background-color: #263f5f;
+  }
+  .white-background .social-login .google {
+    background-color: #f4c280;
+    color: #263f5f;
+  }
+  .white-background .social-login .google img {
+    width: 25px;
+  }
+  .white-background .social-login .twitter {
+    background-color: #263f5f;
+    color: #f4c280;
+    height: initial;
+  }
+  .white-background .social-login .twitter img {
+    width: 20px;
+  }
+  .white-background .social-login p {
+    width: 100%;
+    margin: 0 5px;
+    padding: 8px 0;
+    line-height: 1rem;
+  }
+  .white-background .social-login img {
+    width: 10px;
+    margin-right: 12px;
+  }
+  .white-background .social-login div {
+    width: 48% !important;
+  }
+  .white-background input[type="email"],
+  .white-background input[type="password"],
+  .white-background input[type="text"],
+  .white-background select {
+    width: 70%;
+    height: initial;
+    margin: 5px;
+    height: inherit;
+    outline: none;
+    border: 1px solid #263f5f;
+    color: #000;
+    padding: 6px 8px;
+  }
+  .white-background input[type="email"]::-webkit-input-placeholder,
+  .white-background input[type="password"]::-webkit-input-placeholder,
+  .white-background input[type="text"]::-webkit-input-placeholder,
+  .white-background select::-webkit-input-placeholder {
+    color: #000;
+    font-weight: 300;
+    font-size: 14px;
+    opacity: 1;
+  }
+  .white-background input[type="email"]::-moz-placeholder,
+  .white-background input[type="password"]::-moz-placeholder,
+  .white-background input[type="text"]::-moz-placeholder,
+  .white-background select::-moz-placeholder {
+    color: #000;
+    font-weight: 300;
+    font-size: 14px;
+    opacity: 1;
+  }
+  .white-background input[type="email"]:-ms-input-placeholder,
+  .white-background input[type="password"]:-ms-input-placeholder,
+  .white-background input[type="text"]:-ms-input-placeholder,
+  .white-background select:-ms-input-placeholder {
+    color: #000;
+    font-weight: 300;
+    font-size: 14px;
+    opacity: 1;
+  }
+  .white-background input[type="email"]::placeholder,
+  .white-background input[type="password"]::placeholder,
+  .white-background input[type="text"]::placeholder,
+  .white-background select::placeholder {
+    color: #000;
+    font-weight: 300;
+    font-size: 14px;
+    opacity: 1;
+  }
+  .white-background input[type="email"]:focus,
+  .white-background input[type="password"]:focus,
+  .white-background input[type="text"]:focus,
+  .white-background select:focus {
+    color: #000;
+    border: 1px solid #263f5f;
+    opacity: 1;
+  }
+  .white-background .submit-button {
+    width: 70%;
+    height: initial;
+    background-color: #f4c280;
+    color: #263f5f;
+    border: 0;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+@media screen and (max-width: 65rem) {
+    .poly {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .right-arrow {
+        display: none;
+    }
+
+    .white-background .logo {
+        margin: 10px auto;
+    }
+
+    .white-background .down-arrow {
+        display: none;
+    }
+
+    .white-background .talent {
+        text-align: center;
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    .white-background .login-form {
+        justify-content: center;
+        text-align: center;
+    }
+      .white-background .login-form .social-login {
+        width: 100%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        height: initial;
+    }
+      .white-background .login-form .social-login div {
+        width: 70% !important;
+        margin: 6px auto !important;
+    }      
+}
+  

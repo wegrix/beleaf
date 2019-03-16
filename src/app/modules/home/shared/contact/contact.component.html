@@ -1,0 +1,76 @@
+<form class="contact-form"
+      (ngSubmit)="emailMessage(contactForm.value)"
+      #contactForm="ngForm"
+>
+  <!-- name -->
+  <div class="form-group">
+    <input
+      type="text"
+      name="name"
+      class="form-control"
+      placeholder="Your Name"
+      [(ngModel)]="contact.name"
+      required
+      minlength="3"
+      #nameInput="ngModel"
+    >
+    <div class="alert alert-danger" *ngIf="nameInput.invalid && nameInput.dirty">
+      Name is required and needs to be at least 3 characters long.
+    </div>
+  </div>
+  <!-- email -->
+  <div class="form-group">
+    <input
+      type="email"
+      name="email"
+      class="form-control"
+      placeholder="Your Email"
+      [(ngModel)]="contact.email"
+      required
+      email
+      #emailInput="ngModel"
+    >
+    <div class="alert alert-danger" *ngIf="emailInput.invalid && emailInput.dirty">
+      Email is required.
+    </div>
+  </div>
+  <!-- subject -->
+  <div class="form-group">
+    <input
+      type="text"
+      name="subject"
+      class="form-control"
+      placeholder="Subject"
+      [(ngModel)]="contact.subject"
+      required
+      #subjectInput="ngModel"
+    >
+    <div class="alert alert-danger" *ngIf="subjectInput.invalid && subjectInput.dirty">
+      Subject is required.
+    </div>
+  </div>
+  <!-- message -->
+  <div class="form-group">
+        <textarea
+          class="form-control"
+          name="message"
+          placeholder="What's on your mind?"
+          rows="3"
+          [(ngModel)]="contact.message"
+          required
+          #messageInput="ngModel"
+        ></textarea>
+    <div class="alert alert-danger" *ngIf="messageInput.invalid && messageInput.dirty">
+      Message is required.
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary contact-submit" [disabled]="!contactForm.form.valid">Submit</button>
+</form>
+<div *ngIf="form.submitted">
+  <app-modal
+    [modal]="modal"
+    [edited]="edited"
+    (editChange)="edited = $event"
+    >
+  </app-modal>
+</div>

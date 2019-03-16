@@ -1,0 +1,46 @@
+<div class="row" style="height: 100vh">
+  <div class="col-lg-6 col-md-6 col-sm-12" style="padding: 0;">
+    <img class="right-arrow" src="../../../../assets/images/users/signup/right.png" alt="right arrow" />
+    <div class="poly">
+      <div class="signup-background"></div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-12" style="padding: 0;">
+    <div class="white-background">
+      <img class="down-arrow" src="../../../../assets/images/users/signup/down.png" alt="down arrow" />
+      <a [routerLink]="['/']">
+        <img class="logo" src="../../../../assets/images/users/signup/logo.png" alt="logo" />
+      </a>
+      <div class="talent">
+        <p>Únete/Regístrate</p>
+        <p>y conoce más de nuestro talento</p>
+      </div>
+      <form class="login-form" #signupForm="ngForm" (ngSubmit)="signUp()">
+        <div *ngIf="userError">{{ userError }}</div>
+        <input type="text" name="name" class="name" [(ngModel)]="user.displayName" placeholder="Nombre Completo" />
+        <input type="email" name="email" class="email" id="email" [(ngModel)]="user.email"
+          placeholder="Correo Electrónico" />
+        <select class="custom-select" [(ngModel)]="user.role" name="role" required>
+          <option [ngValue]="null" value="" disabled="true">Role</option>
+          <option *ngFor="let role of roles" [ngValue]="role">
+            {{ role.name }}
+          </option>
+        </select>
+        <input type="password" name="password" class="password" [(ngModel)]="user.password"
+          [ngClass]="{ 'is-invalid': password.value >= 5 }" #password="ngModel" minlength="6" required
+          placeholder="Contraseña" />
+        <div *ngIf="password.dirty && password.invalid">
+          Password is too short
+        </div>
+        <input type="password" name="password-confirm" class="form-control password" [(ngModel)]="user.confirmPassword"
+          #confirmPassword="ngModel" minlength="6" required placeholder="Confirmar contraseña" />
+        <div *ngIf="
+            confirmPassword.dirty && confirmPassword.value !== password.value
+          ">
+          Passwords don't match
+        </div>
+        <button type="submit" class="submit-button">Regístrate</button>
+      </form>
+    </div>
+  </div>
+</div>

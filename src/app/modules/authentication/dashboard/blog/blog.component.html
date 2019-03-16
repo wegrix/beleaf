@@ -1,0 +1,110 @@
+<div class="edit-container">
+  <div class="form-section">
+    <h2 class="secondary-title">Editar Blog</h2>
+  </div>
+  <form class="blog" id="blog">
+    <label for="file-input">
+      <div class="grey-box full-cover">
+        <input id="file-input" type="file" (change)="fileChangeEvent0($event)" accept="image/*" />
+        <img #img [ngClass]="img.src !== defaultImageUrl && 
+              img.src !== defaultProductionImageUrl ? 'cover-picture' : ''"
+          src="../../../../assets/images/users/dashboard/1x/plus-icon.png" alt="Plus Icon">
+        <p *ngIf="img.src === defaultImageUrl
+              || img.src === defaultProductionImageUrl">
+          Foto de portada</p>
+      </div>
+    </label>
+    <image-cropper class="image-cropper" [imageChangedEvent]="imageChangedEvent0" [maintainAspectRatio]="true"
+      [aspectRatio]="4 / 3" [cropperMinWidth]="128" [onlyScaleDown]="true" [roundCropper]="false" format="png"
+      outputType="base64" (imageCropped)="imageCropped($event, img)" (imageLoaded)="imageLoaded()" (loadImageFailed)="loadImageFailed()"></image-cropper>
+    <small *ngIf="img.src !== defaultImageUrl && 
+          img.src !== defaultProductionImageUrl 
+          && imageChangedEvent0"
+      (click)="finishedCrop0()">Guardar
+      Cambios</small>
+    <div class="blog-entry">
+      <p>Crear entrada de Blog</p>
+      <input type="text" placeholder="Título" required>
+      <input type="text" placeholder="Subtitulo (Opcional)">
+      <div class="textarea" *ngFor="let textarea of textAreas">
+        <label>Bloque de texto</label>
+        <textarea #area maxlength="120" rows="6" maxlength="2500" (keyup)="charCount(area)"></textarea>
+        <p class="textarea-charactercount">{{area.value.length}} / 2500</p>
+        <input type="text" placeholder="Subtitulo (Opcional)">
+      </div>
+      <div class="add-blog-button" (click)="addTextArea()">
+        <img src="../../../../assets/images/users/dashboard/1x/plus-icon.png" alt="Plus Icon">
+      </div>
+    </div>
+    <div class="blog-picture-container">
+      <div class="col-lg-4 col-xs-12 col-sm-12 col-md-12">
+        <label for="file-input-1">
+          <input id="file-input-1" type="file" (change)="fileChangeEvent($event)" accept="image/*" />
+          <div class="grey-box">
+            <img #img1 [ngClass]="img1.src !== defaultImageUrl && 
+                      img1.src !== defaultProductionImageUrl ? 'cover-picture' : ''"
+              [src]="'../../../../assets/images/users/dashboard/1x/plus-icon.png'" alt="Plus Icon">
+            <p *ngIf="img1.src === defaultImageUrl
+                      || img1.src === defaultProductionImageUrl">
+              400 x 400</p>
+          </div>
+        </label>
+        <image-cropper class="image-cropper" [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true"
+          [aspectRatio]="4 / 3" [cropperMinWidth]="128" [onlyScaleDown]="true" [roundCropper]="false" format="png"
+          outputType="base64" (imageCropped)="imageCropped($event, img1)" (imageLoaded)="imageLoaded()"
+          (loadImageFailed)="loadImageFailed()"></image-cropper>
+        <small *ngIf="img1.src !== defaultImageUrl && 
+              img1.src !== defaultProductionImageUrl 
+              && imageChangedEvent"
+          (click)="finishedCrop()">Guardar
+          Cambios</small>
+      </div>
+      <div class="col-lg-4 col-xs-12 col-sm-12 col-md-12">
+        <label for="file-input-2">
+          <input id="file-input-2" type="file" (change)="fileChangeEvent2($event)" accept="image/*" />
+          <div class="grey-box">
+            <img #img2 [ngClass]="img2.src !== defaultImageUrl && 
+                      img2.src !== defaultProductionImageUrl ? 'cover-picture' : ''"
+              [src]="'../../../../assets/images/users/dashboard/1x/plus-icon.png'" alt="Plus Icon">
+            <p *ngIf="img2.src === defaultImageUrl
+                      || img2.src === defaultProductionImageUrl">
+              400 x 400
+            </p>
+          </div>
+        </label>
+        <image-cropper class="image-cropper" [imageChangedEvent]="imageChangedEvent2" [maintainAspectRatio]="true"
+          [aspectRatio]="4 / 3" [cropperMinWidth]="128" [onlyScaleDown]="true" [roundCropper]="false" format="png"
+          outputType="base64" (imageCropped)="imageCropped($event, img2)" (imageLoaded)="imageLoaded()"
+          (loadImageFailed)="loadImageFailed()"></image-cropper>
+        <small *ngIf="img2.src !== defaultImageUrl && 
+              img2.src !== defaultProductionImageUrl 
+              && imageChangedEvent2"
+          (click)="finishedCrop2()">Guardar
+          Cambios</small>
+      </div>
+      <div class="col-lg-4 col-sm-12 col-md-12">
+        <label for="file-input-3">
+          <input id="file-input-3" type="file" (change)="fileChangeEvent3($event)" accept="image/*" />
+          <div class="grey-box">
+            <img #img3 [ngClass]="img3.src !== defaultImageUrl &&
+                          img3.src !== defaultProductionImageUrl ? 'cover-picture' : ''"
+              [src]="'../../../../assets/images/users/dashboard/1x/plus-icon.png'" alt="Plus Icon">
+            <p *ngIf="img3.src === defaultImageUrl
+                      || img3.src === defaultProductionImageUrl">
+              400 x 400
+            </p>
+          </div>
+        </label>
+        <image-cropper class="image-cropper" [imageChangedEvent]="imageChangedEvent3" [maintainAspectRatio]="true"
+          [aspectRatio]="4 / 3" [cropperMinWidth]="128" [onlyScaleDown]="true" [roundCropper]="false" format="png"
+          outputType="base64" (imageCropped)="imageCropped($event, img3)" (imageLoaded)="imageLoaded()"
+          (loadImageFailed)="loadImageFailed()"></image-cropper>
+        <small *ngIf="img3.src !== defaultImageUrl && 
+                  img3.src !== defaultProductionImageUrl 
+                  && imageChangedEvent3"
+          (click)="finishedCrop3()">Guardar
+          Cambios</small>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,173 @@
+@import "../../../../assets/styles/abstracts/variables";
+
+* {
+    color: $blue-brand;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.pen {
+    margin: 0 10px;
+    color: hsl(180, 11.8%, 75.1%);
+    font-size: 1.1rem;
+}
+
+.col-lg-4 {
+    padding: 0.3rem;
+}
+
+.col-lg-6 {
+    margin: 2rem 0;
+}
+
+
+input[type="text"], input[type="email"], input[type="tel"] {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid $blue-brand;
+    position: relative;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+textarea {
+    margin: 1rem 0;
+    position: relative;
+}
+
+
+
+.config {
+    display: flex;
+    width: 100%;
+    margin: 2% 0;
+    h4 {
+        width: 32%;
+        text-align: right;
+    }
+    hr {
+        width: 48%;
+        background: $blue-brand;
+    }
+}
+
+nav {
+    ul {
+        padding: 0;
+        .caret {
+            display: flex;
+            margin: 0 0.6rem 0 0;
+        }
+        li, a {
+            display: flex;
+            width: fit-content;
+            list-style: none;
+            align-items: center;
+            vertical-align: middle;
+            text-decoration: none;
+            color: $blue-brand;
+        }
+    }
+}
+
+.edit-container {
+    border: 1px solid $blue-brand;
+    padding: 2rem;
+    .form-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        h2 {
+            font-weight: bolder;
+            font-size: 24px;
+        }
+        .secondary-title {
+            font-size: 32px;
+        }
+        img {
+            margin: 0 0.3rem;
+            width: 50px;
+            border: 1px;
+            height: 50px;
+            border-radius: 50%;
+            vertical-align: middle;
+            margin: 0 10px;
+        }
+        .profile-picture-edit {
+            .pen {
+                margin: 0;
+            }
+        }
+    }
+    .edit-profile {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            width: 100%;
+            position: relative;
+        }
+
+        .pen {
+            position: absolute;
+            right: 0.1rem;
+            font-size: 1.1rem;
+        }
+        .pen-half-width {
+            position: absolute;
+            right: 10px;
+            font-size: 1.1rem;
+            color: hsl(180, 11.8%, 75.1%);
+        }
+
+        .label-pen {
+            display: inline-block;
+            margin-left: 0.6rem;
+            color: hsl(180, 11.8%, 75.1%);;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 60rem) {
+
+    .profile-picture-edit {
+        width: 50%;
+    }
+
+    .config {
+        hr {
+            display: none;
+        }
+    
+        h4 {
+            text-align: center;
+            width: 100%;
+        }
+
+    }
+
+    nav {
+        display: flex;
+        ul {
+            li, a {
+                flex-wrap: wrap;
+                text-align: center;
+            }
+            li {
+                margin: 5px;
+            }
+        }
+    }
+
+}
