@@ -54,8 +54,7 @@ export class PublicityComponent implements OnInit {
       price: price
     };
 
-    this._adNotification.sendAdNotification(this.notification).subscribe((data) =>
-      console.log(data));
+    this._adNotification.sendAdNotification(this.notification).subscribe();
   }
 
 }

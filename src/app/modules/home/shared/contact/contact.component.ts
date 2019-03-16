@@ -13,21 +13,21 @@ import validator from 'validator';
 })
 
 export class ContactComponent implements OnInit {
-    // Form
+  // Form
 
-    @ViewChild('contactForm') form: NgForm;
+  @ViewChild('contactForm') form: NgForm;
 
-    contact: Contact = {
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    };
+  contact: Contact = {
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  };
 
-    modal: Modal;
+  modal: Modal;
 
-    success = false;
-    edited = true;
+  success = false;
+  edited = true;
 
 
   constructor(public _contact: ContactService) { }
@@ -57,9 +57,11 @@ export class ContactComponent implements OnInit {
   }
 
   emailMessage(form: any): void {
-    this._contact.sendEmail(form).subscribe(() => {
-      this.openModal();
-      this.form.reset();
+    this._contact.sendEmail(form).subscribe((data) => {
+      if (data != null || undefined) {
+        this.openModal();
+        this.form.reset();
+      } 
     });
   }
 }

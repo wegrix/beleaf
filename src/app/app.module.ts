@@ -48,7 +48,7 @@ import { NotificationsComponent } from './modules/authentication/dashboard/notif
     NotificationsComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
