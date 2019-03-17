@@ -21,17 +21,19 @@ export class LoginComponent implements OnInit {
 
   userError: any;
 
-  constructor(public auth: AuthService, private _SEO: SeoService) { }
-
-  ngOnInit() {
-    this.user.email = localStorage.getItem('user.email');
-    this.user.password = localStorage.getItem('user.password');
+  constructor(public auth: AuthService, private _SEO: SeoService) {
     this._SEO.generateTags({
       title: 'Beleaf - Login',
       description: 'Accede a tu cuenta utilizando Google o Facebook',
       image: "https://beleaf.herokuapp.com/assets/images/home/banner/design.png",
       slug: 'login'
     })
+  }
+
+  ngOnInit() {
+    this.user.email = localStorage.getItem('user.email');
+    this.user.password = localStorage.getItem('user.password');
+
   }
 
   signIn() {
