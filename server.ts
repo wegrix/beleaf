@@ -50,7 +50,7 @@ app.get('*', (req, res) => {
 });
 
 app.route('/sitemap.xml').get((req, res) => {
-  res.sendFile(join(DIST_FOLDER, 'sitemap.xml'))
+  res.sendFile(path.resolve(path.join(__dirname, '/sitemap.xml')));
 })
 
 // Start up the Node server
