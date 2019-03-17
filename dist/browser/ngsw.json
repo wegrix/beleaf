@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1552829908312,
+  "timestamp": 1552837118857,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -10,7 +10,7 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.fd372d3f3f1c50d4ae1f.js",
+        "/main.aa8c4fc027ca36b16f3c.js",
         "/polyfills.4ea41d8426ec45a3408e.js",
         "/runtime.26209474bfa8dc87a77c.js",
         "/scripts.a3514d0d1bab9c636e15.js",
@@ -760,6 +760,7 @@
         "/assets/images/users/dashboard/1x/question.png",
         "/assets/images/users/dashboard/1x/search.png",
         "/assets/images/users/dashboard/1x/star.png",
+        "/assets/images/users/dashboard/SVG/question.svg",
         "/assets/images/users/dashboard/logo.png",
         "/assets/images/users/login/down.png",
         "/assets/images/users/login/login.png",
@@ -1522,6 +1523,7 @@
     "/assets/images/users/dashboard/1x/question.png": "3929ad0d311034cbf619b4d07f8095a8bc72fb84",
     "/assets/images/users/dashboard/1x/search.png": "3be8dd5b6d6c12e0beff84f246037e6005dafeef",
     "/assets/images/users/dashboard/1x/star.png": "c48accc119919a73e8635a21bfdedad7735c3b04",
+    "/assets/images/users/dashboard/SVG/question.svg": "3486e70d45a4bfb5cf4d67f673a180c87fd41c53",
     "/assets/images/users/dashboard/logo.png": "99b984e98907310823b713661fe594fddd9e15a9",
     "/assets/images/users/login/down.png": "2c35ff5cbfe1ef5e2e9883d150897a3bad59a091",
     "/assets/images/users/login/login.png": "6f6c67793403a47c324e81efd48c4d5a046a7133",
@@ -1540,9 +1542,9 @@
     "/assets/styles/abstracts/_placeholders.scss": "a88f5fdf378b030edf74f8b3483e3cbc162dd03a",
     "/assets/styles/abstracts/_variables.scss": "0e00a0aab95afdaa1506b014f461c6e7e56c5a65",
     "/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/index.html": "27b11e8319443c0469f928b0af6239a9133af9c8",
+    "/index.html": "f07aebb06e47fa38cf36397a78501e321c9546a0",
     "/login.9ae7d8385e8c042e9804.png": "6f6c67793403a47c324e81efd48c4d5a046a7133",
-    "/main.fd372d3f3f1c50d4ae1f.js": "89b776e3bc37e606fbb5f6715a30132538acbda4",
+    "/main.aa8c4fc027ca36b16f3c.js": "1f13aaa3f361ac730ab85511712960089e5a8190",
     "/polyfills.4ea41d8426ec45a3408e.js": "6946e10a03311677a01490b8e91741668e64e17e",
     "/runtime.26209474bfa8dc87a77c.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
     "/scripts.a3514d0d1bab9c636e15.js": "02f92265690b06bbd485a66464132b40e3215ba3",

@@ -3,12 +3,14 @@
   <div class="notification-input">
     <input type="checkbox" name="monthly-sales" class="monthly-sales">
     <label for="monthly-sales">Reportes mensuales de ventas</label>
-    <img class="question-mark" src="../../../../../assets/images/users/dashboard//1x/question.png" alt="question-mark icon">
+    <img class="question-mark" src="../../../../../assets/images/users/dashboard/SVG/question.svg" alt="question-mark icon"
+      (mouseenter)="monthlyToolTip = true" (mouseleave)="monthlyToolTip = false">
   </div>
   <div class="notification-input">
     <input type="checkbox" name="promos" class="promos">
     <label for="promos">Planes de Publicidad y promos</label>
-    <img class="question-mark" src="../../../../../assets/images/users/dashboard//1x/question.png" alt="question-mark icon">
+    <img class="question-mark" src="../../../../../assets/images/users/dashboard/SVG/question.svg" alt="question-mark icon"
+      (mouseenter)="publicityToolTip = true" (mouseleave)="publicityToolTip = false">
   </div>
   <div class="notification-input">
     <input type="checkbox" name="activate-comments" class="activate-comments">
@@ -16,5 +18,21 @@
   </div>
   <div class="comments">
     <h5>Últimos comentarios</h5>
+  </div>
+</div>
+<div class="toolTipContainer" *ngIf="monthlyToolTip">
+  <div class="toolTip">
+    <img class="question-mark" src="../../../../../assets/images/users/dashboard/SVG/question.svg" alt="question-mark icon">
+    <p>Recibirás un reporte mensual de tus 
+      ventas al correo associado con tu cuenta Be-leaf
+    </p>
+  </div>
+</div>
+<div class="toolTipContainer" *ngIf="publicityToolTip">
+  <div class="toolTip">
+    <img class="question-mark" src="../../../../../assets/images/users/dashboard/SVG/question.svg" alt="question-mark icon">
+    <p>Notificación de variación de precios en publicidad ,
+      pauta y planes para mejorar tu vision en el mercado local
+    </p>
   </div>
 </div>

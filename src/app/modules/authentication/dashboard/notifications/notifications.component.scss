@@ -22,12 +22,45 @@
         }
     }
 
-    h1, .notification-input {
+    h1,
+    .notification-input {
         margin: 1rem 3rem;
     }
 
     .comments {
         display: flex;
         justify-content: center;
+        margin: 0 15%;
+
+        h5 {
+            font-weight: bolder;
+        }
+    }
+}
+
+.toolTipContainer {
+    border: 1px solid $blue-brand;
+    width: 72%;
+    float: right;
+    margin: 2% 0 2% 0;
+
+    .toolTip {
+        position: relative;
+        padding: 10% 5%;
+        .question-mark {
+            width: 7%;
+            position: absolute;
+            top: 4%;
+            left: 4%;
+        }
+        p {
+            margin: 2% 8%;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .toolTipContainer {
+        width: 100%;
     }
 }
