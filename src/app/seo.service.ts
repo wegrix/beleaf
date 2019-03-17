@@ -47,7 +47,6 @@ export class SeoService {
 
   updateDescription(desc: string) {
     this.meta.updateTag({ name: 'description', content: desc })
-    this.meta.updateTag({ name: 'twitter:description', content: desc })
   }
 
   updateImage(desc: string) {
