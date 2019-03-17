@@ -58,10 +58,8 @@ export class ContactComponent implements OnInit {
 
   emailMessage(form: any): void {
     this._contact.sendEmail(form).subscribe((data) => {
-      if (data != null || undefined) {
         this.openModal();
         this.form.reset();
-      } 
     });
   }
 }
