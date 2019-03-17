@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Meta } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -26,6 +26,7 @@ import { DashboardMainLinksComponent } from './modules/authentication/dashboard/
 import { BlogComponent } from './modules/authentication/dashboard/blog/blog.component';
 import { PublicityComponent } from './modules/authentication/dashboard/publicity/publicity.component';
 import { NotificationsComponent } from './modules/authentication/dashboard/notifications/notifications.component';
+
 
 
 
@@ -57,6 +58,7 @@ import { NotificationsComponent } from './modules/authentication/dashboard/notif
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule.enablePersistence(),
     ImageCropperModule,
+   
   ],
   providers: [
     ContactService,
