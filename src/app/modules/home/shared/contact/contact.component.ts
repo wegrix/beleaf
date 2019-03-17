@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ContactService } from './contact.service';
 import { Contact } from './contact.model';
-import { Modal } from '../modal/modal.model';
 import { NgForm } from '@angular/forms';
 import validator from 'validator';
 
@@ -24,8 +23,6 @@ export class ContactComponent implements OnInit {
     message: ''
   };
 
-  modal: Modal;
-
   success = false;
   edited = true;
 
@@ -39,27 +36,21 @@ export class ContactComponent implements OnInit {
   openModal() {
     if (validator.isEmail(this.contact.email)) {
       this.success = true;
-      this.modal = {
-        header: 'MENSAJE ENVIADO',
-        message: 'satisfactoriamente',
-        footer: 'Pronto estaremos en contacto',
-        image: '../../../../../assets/icons/ios-mail-open.svg',
-      };
     } else {
       this.success = false;
-      this.modal = {
-        header: 'MENSAJE NO ENVIADO',
-        message: '',
-        footer: '¡Oops!',
-        image: '../../../../../assets/icons/ios-close.svg',
-      };
     }
   }
 
+  // Closes Modal
+  closeModal() {
+    this.edited = false;
+  }
+
+
   emailMessage(form: any): void {
     this._contact.sendEmail(form).subscribe((data) => {
-        this.openModal();
-        this.form.reset();
+      this.openModal();
+      this.form.reset();
     });
   }
 }

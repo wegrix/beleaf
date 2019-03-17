@@ -9,7 +9,6 @@ import { HomeComponent } from './modules/home/home.component';
 import { ContactComponent } from './modules/home/shared/contact/contact.component';
 import { FooterComponent } from './modules/home/shared/footer/footer.component';
 import { HeaderComponent } from './modules/home/shared/header/header.component';
-import { ModalComponent } from './modules/home/shared/modal/modal.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ContactService } from './modules/home/shared/contact/contact.service';
@@ -39,7 +38,6 @@ import { NotificationsComponent } from './modules/authentication/dashboard/notif
     ContactComponent,
     FooterComponent,
     HeaderComponent,
-    ModalComponent,
     DashboardComponent,
     DashboardHeaderComponent,
     DashboardMainLinksComponent,

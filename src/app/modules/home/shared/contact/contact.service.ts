@@ -11,6 +11,6 @@ export class ContactService {
   constructor(private http: HttpClient) { }
 
   sendEmail(body: any): Observable<any> {
-    return of(this.http.post(`https://beleaf-api.herokuapp.com/contact`, body));
+    return this.http.post(`https://beleaf-api.herokuapp.com/contact`, body);
   }
 }

@@ -11,8 +11,8 @@ import {join} from 'path';
 (global as any).WebSocket = require('ws');
 (global as any).XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 
-// Faster server renders w/ Prod mode (dev mode never needed)
-enableProdMode();
+// Faster server renders w/ Prod mode (dev mode never needed) enableProdMode();
+
 
 // Express server
 const app = express();
