@@ -14,11 +14,11 @@ import { environment } from '../environments/environment';
 import { ContactService } from './modules/home/shared/contact/contact.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
-import {AngularFireModule} from '@angular/fire';
-import {AngularFirestoreModule} from '@angular/fire/firestore';
-import {AngularFireAuthModule} from '@angular/fire/auth';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 import { FirestoreSettingsToken } from '@angular/fire/firestore';
-import {AngularFireStorageModule, StorageBucket} from '@angular/fire/storage';
+import { AngularFireStorageModule, StorageBucket } from '@angular/fire/storage';
 import { DashboardComponent } from './modules/authentication/dashboard/dashboard.component';
 import { DashboardHeaderComponent } from './modules/authentication/shared/header/dashboard-header.component';
 import { ImageCropperModule } from 'ngx-image-cropper';
@@ -26,7 +26,16 @@ import { DashboardMainLinksComponent } from './modules/authentication/dashboard/
 import { BlogComponent } from './modules/authentication/dashboard/blog/blog.component';
 import { PublicityComponent } from './modules/authentication/dashboard/publicity/publicity.component';
 import { NotificationsComponent } from './modules/authentication/dashboard/notifications/notifications.component';
+import { MetaModule, MetaConfig } from 'ng2-meta';
 
+
+const metaConfig: MetaConfig = {
+  //Append a title suffix such as a site name to all titles
+  defaults: {
+    title: 'Beleaf - Diseño y Talento Local',
+    'og:image': 'https://beleaf.herokuapp.com/assets/images/home/banner/design.png',
+  }
+};
 
 
 
@@ -58,7 +67,8 @@ import { NotificationsComponent } from './modules/authentication/dashboard/notif
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule.enablePersistence(),
     ImageCropperModule,
-   
+    MetaModule.forRoot()
+
   ],
   providers: [
     ContactService,
