@@ -18,11 +18,11 @@ export class SignupComponent implements OnInit {
 
   userError: any;
 
-  roles = [
+  /*roles = [
     { name: 'Developer', code: 'Dev' },
     { name: 'Designer', code: 'Des' },
     { name: 'Animation', code: 'Anim' }
-  ];
+  ];*/
 
   show = false;
 

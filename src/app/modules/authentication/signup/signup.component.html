@@ -18,17 +18,15 @@
       <form class="login-form" #signupForm="ngForm" (ngSubmit)="signUp()">
         <div *ngIf="userError">{{ userError }}</div>
         <input type="text" name="name" class="name" [(ngModel)]="user.displayName" placeholder="Nombre Completo" />
-        <input type="email" name="email" class="email" id="email" [(ngModel)]="user.email"
-          placeholder="Correo Electrónico" />
-        <select class="custom-select" [(ngModel)]="user.role" name="role" required>
+        <input type="email" name="email" class="email" id="email" [(ngModel)]="user.email" placeholder="Correo Electrónico" />
+        <!-- <select class="custom-select" [(ngModel)]="user.role" name="role" required>
           <option [ngValue]="null" value="" disabled="true">Role</option>
           <option *ngFor="let role of roles" [ngValue]="role">
             {{ role.name }}
           </option>
-        </select>
-        <input type="password" name="password" class="password" [(ngModel)]="user.password"
-          [ngClass]="{ 'is-invalid': password.value >= 5 }" #password="ngModel" minlength="6" required
-          placeholder="Contraseña" />
+        </select>-->
+        <input type="password" name="password" class="password" [(ngModel)]="user.password" [ngClass]="{ 'is-invalid': password.value >= 5 }"
+          #password="ngModel" minlength="6" required placeholder="Contraseña" />
         <div *ngIf="password.dirty && password.invalid">
           Password is too short
         </div>
