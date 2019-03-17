@@ -22,35 +22,17 @@ export class SeoService {
     // Set a title
     this.titleService.setTitle(tags.title);
     // Set meta tags
-    const metaItems = [
-      { name: 'twitter:site', content: 'https://beleaf.herokuapp.com' },
-      { name: 'twitter:card', content: 'summary' },
-      { name: 'twitter:title', content: tags.title },
-      { name: 'twitter:description', content: tags.description },
-      { name: 'twitter:image', content: tags.image },
-      { name: 'description', content: tags.description },
-      { property: 'og:type', content: 'website' },
-      { property: 'og:site_name', content: 'Beleafdesign' },
-      { property: 'og:title', content: tags.title },
-      { property: 'og:description', content: tags.description },
-      { property: 'og:image', content: tags.image },
-      { property: 'og:url', content: `https://beleaf.herokuapp.com/${tags.slug}` }
-    ]
-
-    this.meta.addTags(metaItems, true);
-    /** 
-     * this.meta.updateTag({ name: 'twitter:card', content: 'summary' });
-     this.meta.updateTag({ name: 'twitter:site', content: 'https://beleaf.herokuapp.com' });
-     this.meta.updateTag({ name: 'twitter:title', content: tags.title });
-     this.meta.updateTag({ name: 'twitter:description', content: tags.description });
-     this.meta.updateTag({ name: 'twitter:image', content: tags.image });
-     this.meta.updateTag({ name: 'description', content: tags.description })
-     this.meta.updateTag({ property: 'og:type', content: 'website' });
-     this.meta.updateTag({ property: 'og:site_name', content: 'Beleafdesign' });
-     this.meta.updateTag({ property: 'og:title', content: tags.title });
-     this.meta.updateTag({ property: 'og:description', content: tags.description });
-     this.meta.updateTag({ property: 'og:image', content: tags.image });
-     this.meta.updateTag({ property: 'og:url', content: `https://beleaf.herokuapp.com/${tags.slug}` });
-     * */
+    this.meta.updateTag({ name: 'twitter:card', content: 'summary' });
+    this.meta.updateTag({ name: 'twitter:site', content: 'https://beleaf.herokuapp.com' });
+    this.meta.updateTag({ name: 'twitter:title', content: tags.title });
+    this.meta.updateTag({ name: 'twitter:description', content: tags.description });
+    this.meta.updateTag({ name: 'twitter:image', content: tags.image });
+    this.meta.updateTag({name: 'description', content: tags.description})
+    this.meta.updateTag({ property: 'og:type', content: 'website' });
+    this.meta.updateTag({ property: 'og:site_name', content: 'Beleafdesign' });
+    this.meta.updateTag({ property: 'og:title', content: tags.title });
+    this.meta.updateTag({ property: 'og:description', content: tags.description });
+    this.meta.updateTag({ property: 'og:image', content: tags.image });
+    this.meta.updateTag({ property: 'og:url', content: `https://beleaf.herokuapp.com/${tags.slug}` });
   }
 }
