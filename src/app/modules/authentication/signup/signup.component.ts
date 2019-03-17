@@ -30,12 +30,12 @@ export class SignupComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._SEO.generateTags({
+/*     this._SEO.generateTags({
       title: 'Beleaf - Crea una cuenta ahora',
       description: 'Crea una cuenta donde puedas vender o comprar productos.',
       image: "https://beleaf.herokuapp.com/assets/images/home/banner/design.png",
       slug: 'login'
-    })
+    }) */
   }
 
   signUp() {

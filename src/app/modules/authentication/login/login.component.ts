@@ -28,12 +28,12 @@ export class LoginComponent implements OnInit {
     this.user.email = localStorage.getItem('user.email');
     this.user.password = localStorage.getItem('user.password');
 
-    this._SEO.generateTags({
+/*     this._SEO.generateTags({
       title: 'Beleaf - Accede a tu cuenta',
       description: 'Accede a tu cuenta utilizando Google o Facebook',
       image: "https://beleaf.herokuapp.com/assets/images/home/banner/design.png",
       slug: 'login'
-    })
+    }) */
 
   }
 
