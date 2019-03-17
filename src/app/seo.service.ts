@@ -27,7 +27,7 @@ export class SeoService {
     this.meta.updateTag({ name: 'twitter:title', content: tags.title });
     this.meta.updateTag({ name: 'twitter:description', content: tags.description });
     this.meta.updateTag({ name: 'twitter:image', content: tags.image });
-
+    this.meta.updateTag({name: 'description', content: tags.description})
     this.meta.updateTag({ property: 'og:type', content: 'website' });
     this.meta.updateTag({ property: 'og:site_name', content: 'Beleafdesign' });
     this.meta.updateTag({ property: 'og:title', content: tags.title });
