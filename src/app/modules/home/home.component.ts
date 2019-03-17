@@ -26,17 +26,16 @@ export class HomeComponent implements OnInit {
     }
   ];
 
-  constructor(private _SEO: SeoService) { 
+  constructor(private _SEO: SeoService) {
+  }
+
+  ngOnInit() {
     this._SEO.generateTags({
       title: 'Beleaf - Diseño y Talento Local',
       description: 'Beleafdesign is a startup company based in Colombia that wants to inspire designers to create more work and be able to profit from it.',
       image: "https://beleaf.herokuapp.com/assets/images/home/banner/design.png",
       slug: ''
     })
-
-  }
-
-  ngOnInit() {
   }
 
 }
