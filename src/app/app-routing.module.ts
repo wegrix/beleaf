@@ -33,7 +33,7 @@ const routes: Routes = [
     }
   },
   {
-    path: 'signup', component: SignupComponent, pathMatch: 'full', data: {
+    path: 'signup', component: SignupComponent, pathMatch: 'full', canActivate: [MetaGuard], data: {
       meta: {
         title: 'Beleaf - Crea una cuenta ahora',
         description: 'Crea una cuenta donde puedas vender o comprar productos.',
