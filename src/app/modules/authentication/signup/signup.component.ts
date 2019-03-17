@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { User } from '../user.model';
+import { SeoService } from 'src/app/seo.service';
 
 @Component({
   selector: 'app-signup',
@@ -18,24 +19,31 @@ export class SignupComponent implements OnInit {
   userError: any;
 
   roles = [
-    {name: 'Developer', code: 'Dev'},
-    {name: 'Designer', code: 'Des'},
-    {name: 'Animation', code: 'Anim'}
+    { name: 'Developer', code: 'Dev' },
+    { name: 'Designer', code: 'Des' },
+    { name: 'Animation', code: 'Anim' }
   ];
 
   show = false;
 
-  constructor(public auth: AuthService) { }
+  constructor(public auth: AuthService, private _SEO: SeoService) {
+    this._SEO.generateTags({
+      title: 'Beleaf - Crea una cuenta ahora',
+      description: 'Crea una cuenta donde puedas vender o comprar productos.',
+      image: "https://beleaf.herokuapp.com/assets/images/home/banner/design.png",
+      slug: 'login'
+    })
+  }
 
   ngOnInit() {
   }
 
   signUp() {
     if (this.user.password === this.user.confirmPassword) {
-    this.auth.customSignup(this.user.email, this.user.password, this.user.displayName, this.user.role)
-    .catch(e => {
-      this.userError = e;
-    });
+      this.auth.customSignup(this.user.email, this.user.password, this.user.displayName, this.user.role)
+        .catch(e => {
+          this.userError = e;
+        });
     }
   }
 
