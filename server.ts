@@ -36,7 +36,7 @@ app.engine('html', ngExpressEngine({
 app.set('view engine', 'html');
 app.set('views', DIST_FOLDER);
 
-app.use(require('prerender-node'));
+app.use(require('prerender-node').set('prerenderToken', 'iNM9e5ZkYUiv9T2CANxJ'));
 
 // Example Express Rest API endpoints
 // app.get('/api/**', (req, res) => { });
