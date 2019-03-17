@@ -7,10 +7,7 @@
       <p>Diseño</p>
     </div>
     <div class="image-banner-item">
-      <img
-        src="../../../assets/images/home/banner/decoration.png"
-        alt="decoration"
-      />
+      <img src="../../../assets/images/home/banner/decoration.png" alt="decoration" />
       <p>Decoración</p>
     </div>
     <div class="image-banner-item">
@@ -44,14 +41,18 @@
     <div class="col-lg-12 col-md-12 col-sm-12">
       <div class="plant-banner">
         <div class="block">
-          <div><p>Pauta publicitaria</p></div>
+          <div>
+            <p>Pauta publicitaria</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-lg-7 col-md-7 col-sm-12 publicity">
-      <div class="month-deals"><p>(Month) deals</p></div>
+      <div class="month-deals">
+        <p>(Month) deals</p>
+      </div>
     </div>
     <div class="col-lg-5 col-md-5 col-sm-12 publicity">
       <div class="ad-container">
@@ -73,27 +74,15 @@
         <p class="talent-background-third-subtitle">
           los diseños que más te gustan.
         </p>
-        <img
-          class="down-arrow"
-          src="./../../../assets/images/home/banner/down-arrow.png"
-          alt="down arrow"
-        />
-        <img
-          class="right-arrow"
-          src="./../../../assets/images/home/banner/right-arrow.png"
-          alt="right arrow"
-        />
+        <img class="down-arrow" src="./../../../assets/images/home/banner/down-arrow.png" alt="down arrow" />
+        <img class="right-arrow" src="./../../../assets/images/home/banner/right-arrow.png" alt="right arrow" />
       </div>
     </div>
   </div>
   <div class="row">
     <div class="information">
       <div class="grey-box">
-        <img
-          class="plane img-fluid"
-          src="./../../../assets/images/home/icons/plane.png"
-          alt="plane icon"
-        />
+        <img class="plane img-fluid" src="./../../../assets/images/home/icons/plane.png" alt="plane icon" />
         <h4>Envios a todo el país</h4>
         <hr />
         <p>
@@ -101,21 +90,13 @@
         </p>
       </div>
       <div class="grey-box">
-        <img
-          class="email"
-          src="./../../../assets/images/home/icons/email.png"
-          alt="email icon"
-        />
+        <img class="email" src="./../../../assets/images/home/icons/email.png" alt="email icon" />
         <h4>Soporte 24/7</h4>
         <hr />
         <p>Personal capacitado para brindarte el apoyo que necesitas</p>
       </div>
       <div class="grey-box">
-        <img
-          class="tags"
-          src="./../../../assets/images/home/icons/tags.png"
-          alt="pricetag icon"
-        />
+        <img class="tags" src="./../../../assets/images/home/icons/tags.png" alt="pricetag icon" />
         <h4>Productos exclusivos</h4>
         <hr />
         <p>
@@ -137,13 +118,7 @@
       <div class="nature-container">
         <h1>Somos Nature Friendly - Somos Be-leaf</h1>
         <p>
-          <a
-            class="social"
-            *ngFor="let social of instagrams"
-            rel="noreferrer"
-            href="{{ social.url }}"
-            target="_blank"
-          >
+          <a class="social" *ngFor="let social of instagrams" rel="noreferrer" href="{{ social.url }}" target="_blank">
             {{ social.name }}
           </a>
         </p>
@@ -157,12 +132,7 @@
     <div class="col-lg-6 col-md-6 col-sm-12">
       <div class="cta">
         <p>Call to action</p>
-        <a
-          class="view-button"
-          [routerLink]="['/signup']"
-          routerLinkActive="router-link-active"
-          >Registrate ya</a
-        >
+        <a class="view-button" [routerLink]="['/signup']" routerLinkActive="router-link-active">Registrate ya</a>
       </div>
     </div>
   </div>
