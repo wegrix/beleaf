@@ -6,7 +6,6 @@ import { ngExpressEngine } from '@nguniversal/express-engine';
 import { provideModuleMap } from '@nguniversal/module-map-ngfactory-loader';
 
 import * as express from 'express';
-import *  as path from 'path';
 import { join } from 'path';
 
 (global as any).WebSocket = require('ws');
@@ -48,10 +47,6 @@ app.get('*.*', express.static(DIST_FOLDER, {
 app.get('*', (req, res) => {
   res.render('index', { req });
 });
-
-app.route('/sitemap.xml').get((req, res) => {
-  res.sendFile(path.resolve(path.join(__dirname, '/sitemap.xml')));
-})
 
 // Start up the Node server
 app.listen(PORT, () => {
