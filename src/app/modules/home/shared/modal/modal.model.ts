@@ -1,5 +1,5 @@
 export interface Modal {
-    header: string;
+    header?: string;
     message?: string;
     footer: string;
     image: string;
