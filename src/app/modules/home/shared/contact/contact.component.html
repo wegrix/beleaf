@@ -31,10 +31,10 @@
       Message is required.
     </div>
   </div>
-  <button type="submit" class="btn btn-primary contact-submit" [disabled]="!contactForm.form.valid">Submit</button>
+  <button type="submit" class="btn btn-primary contact-submit" [disabled]="!contactForm.form.valid" (click)="edited = true">Submit</button>
 </form>
 <div *ngIf="form.submitted">
-  <div *ngIf="edited && success">
+  <div *ngIf="edited && success; else error">
     <div class="modal-container" data-target="#modal">
       <div class="modal-content">
         <button type="button" class="close" aria-label="Close" (click)="closeModal()" style="color:#F4C17F; float: right; display: flex; align-self: flex-end;">
@@ -49,20 +49,21 @@
       </div>
     </div>
   </div>
-  <!-- Erro -->
-  <div *ngIf="edited && !success">
-    <div class="modal-container" data-target="#modal">
-      <div class="modal-content">
-        <button type="button" class="close" aria-label="Close" (click)="closeModal()" style="color:#F4C17F; float: right; display: flex; align-self: flex-end;">
-          <img class="mail" src="../../../../../assets/icons/ios-close.svg" alt="close icon" style="width: 40px; margin: 0">
-        </button>
-        <img src="../../../../../assets/images/home/modal/logo.png" alt="logo" style="width: 50%; margin-top: 5%">
-        <p>MENSAJE NO ENVIADO</p>
-        <hr>
-        <p class="satisfactory"></p>
-        <img class="mail" src="../../../../../assets/images/home/modal/email.png" alt="email icon">
-        <p class="soon">¡Oops!</p>
+  <ng-template #error>
+    <!-- Error -->
+    <div *ngIf="edited && !success;">
+      <div class="modal-container" data-target="#modal">
+        <div class="modal-content">
+          <button type="button" class="close" aria-label="Close" (click)="closeModal()" style="color:#F4C17F; float: right; display: flex; align-self: flex-end;">
+            <img class="mail" src="../../../../../assets/icons/ios-close.svg" alt="close icon" style="width: 40px; margin: 0">
+          </button>
+          <img src="../../../../../assets/images/home/modal/logo.png" alt="logo" style="width: 50%; margin-top: 5%">
+          <p>MENSAJE NO ENVIADO</p>
+          <hr>
+          <p class="satisfactory"></p>
+          <img class="mail" src="../../../../../assets/images/home/modal/email.png" alt="email icon">
+          <p class="soon">¡Oops!</p>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+  </ng-template>

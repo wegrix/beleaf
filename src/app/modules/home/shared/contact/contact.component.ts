@@ -23,14 +23,15 @@ export class ContactComponent implements OnInit {
     message: ''
   };
 
-  success = false;
-  edited = true;
+  success: Boolean;
+  edited: Boolean;
 
 
   constructor(public _contact: ContactService) { }
 
 
   ngOnInit() {
+    this.edited = true;
   }
 
   openModal() {
@@ -43,7 +44,7 @@ export class ContactComponent implements OnInit {
 
   // Closes Modal
   closeModal() {
-    this.edited = false;
+    this.edited = !this.edited;
   }
 
 
