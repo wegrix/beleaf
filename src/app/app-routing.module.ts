@@ -33,14 +33,7 @@ const routes: Routes = [
     }
   },
   {
-    path: 'signup', component: SignupComponent, pathMatch: 'full', canActivate: [MetaGuard], data: {
-      meta: {
-        title: 'Beleaf - Crea una cuenta ahora',
-        description: 'Crea una cuenta donde puedas vender o comprar productos.',
-        ogUrl: 'https://beleaf.herokuapp.com/signup',
-        'og:image': 'https://beleaf.herokuapp.com/assets/images/home/banner/design.png',
-      }
-    }
+    path: 'signup', component: SignupComponent, pathMatch: 'full', canActivate: [MetaGuard]
   },
   { path: 'dashboard/user/:id', component: DashboardComponent, canActivate: [AuthGuard] }
 ];
