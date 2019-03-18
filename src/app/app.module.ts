@@ -67,7 +67,7 @@ const metaConfig: MetaConfig = {
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule.enablePersistence(),
     ImageCropperModule,
-    MetaModule.forRoot()
+    MetaModule.forRoot(metaConfig)
 
   ],
   providers: [
